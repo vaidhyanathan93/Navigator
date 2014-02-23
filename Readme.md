@@ -1,1 +1,0 @@
-This Project is Doing for CTS Cio's Challenge 2014 . This project will not be available to open source until August 2014.
