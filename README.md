@@ -8,8 +8,13 @@ Front End Tools
 ================
 
 JQuery 
+
+
 Angular.js
+
+
 Semantic -UI
+
 
 Database
 ========
