@@ -17,8 +17,7 @@ JQuery
 
 Angular.js
 
-
-Semantic -UI
+BootStrap
 
 
 Database
