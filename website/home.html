@@ -2,9 +2,12 @@
 <head>
 <title>HOME PAGE</title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-<script src="js/custom.js"></script>
-<script src="js/angular.min.js"></script>
 <link href="css/custom.css" rel="stylesheet" type="text/css">
+<link href="css/jquery-ui-1.10.4.custom.min.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.10.2.js"></script>
+<script src="js/jquery-ui-1.10.4.custom.min.js"></script>
+<script src="js/angular.min.js"></script>
+<script src="js/custom.js"></script>
 </head>
 <body class="homebody">
 <div id="toppane">
@@ -12,11 +15,10 @@
     <tr>
       <td width="92"><img src="images/associate.jpg" class="mainicon"></td>
       <td width="189" align="center"><span class="welcome"> Welcome</span> <br>
-      
         <span class="name">Bob</span></td>
       <td width="66"></td>
-      <td width="92"><img src="images/feedback.png" class="mainicon" ></td>
-      <td width="92"><img src="images/help.png" class="mainicon"></td>
+      <td width="92" id="feedback"><img src="images/feedback.png" class="mainicon" ></td>
+      <td width="92" id="help"><img src="images/help.png" class="mainicon"></td>
       <td width="92"><img src="images/admin.png" class="mainicon"></td>
       <td width="163"></td>
       <td width="59"><img src="images/message4.png" class="notification"></td>
@@ -33,5 +35,8 @@
     <tr><img src="images/store.png" class="mainicon"></tr>
   </table>
 </div>
+<img src="images/finley.png" class="finley"alt="Finley">
+<div id="maindialog">
+<img src="images/rightdrop.png" id="drop" " alt="updrop">
 </div>
 </html>
