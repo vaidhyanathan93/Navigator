@@ -1,0 +1,21 @@
+<!doctype html>
+  <html xmlns:ng="http://angularjs.org" id="ng-app" ng-app="optionalModuleName">
+    <head>
+      <!--[if lte IE 8]>
+        <script>
+          document.createElement('ng-include');
+          document.createElement('ng-pluralize');
+          document.createElement('ng-view');
+ 
+          // Optionally these for CSS
+          document.createElement('ng:include');
+          document.createElement('ng:pluralize');
+          document.createElement('ng:view');
+        </script>
+      <![endif]-->
+    </head>
+    <body>
+    <input type="text" ng-model="Hello">
+    {{hello}}
+    </body>
+  </html>

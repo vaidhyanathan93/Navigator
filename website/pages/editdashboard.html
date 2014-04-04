@@ -1,0 +1,42 @@
+<div id="editdashboard" ng-controller="editdashboard">
+  <form id="form1" name="form1" method="post" ng-submit="onsubmit()">
+    <table width="393" border="0" cellspacing="20" cellpadding="10">
+      <tr>
+        <td width="110"><font class="formlabel">Associate Name </font><br /></td>
+        <td width="155"><div class="input-group"> <span class="input-group-addon form-text-box-icon"><span class="glyphicon glyphicon-user "></span></span>
+            <input type="text" ng-model="usr.name" class="form-control form-text-box" placeholder="Username">
+          </div></td>
+      </tr>
+      <tr>
+        <td><font class="formlabel">Address </font></td>
+        <td><div class="input-group"> <span class="input-group-addon form-text-box-icon"><span class="glyphicon glyphicon-map-marker "></span></span>
+            <input type="text" ng-model="usr.address" class="form-control form-text-box" placeholder="Username">
+          </div></td>
+      </tr>
+      <tr>
+        <td><font class="formlabel">City </font></td>
+        <td><div class="input-group"> <span class="input-group-addon form-text-box-icon"><span class="glyphicon glyphicon-road "></span></span>
+            <input type="text" ng-model="usr.city" class="form-control form-text-box" placeholder="Username">
+          </div></td>
+      </tr>
+      <tr>
+        <td><font class="formlabel">Phone No</font></td>
+        <td><div class="input-group"> <span class="input-group-addon form-text-box-icon"><span class="glyphicon glyphicon-earphone "></span></span>
+            <input type="text" ng-model="usr.phone" class="form-control form-text-box" placeholder="Username">
+          </div></td>
+      </tr>
+      <tr>
+        <td><font class="formlabel">Email</font></td>
+        <td><div class="input-group"> <span class="input-group-addon form-text-box-icon"><span class="glyphicon glyphicon-envelope "></span></span>
+            <input type="text" ng-model="usr.email" class="form-control form-text-box" placeholder="Username">
+          </div></td>
+      </tr>
+      <tr>
+        <td align="right"><input type="reset" value="Cancel" class="btn btn-primary  regularbutton" ng-click="cancel()" /></td>
+        <td>&nbsp;&nbsp;
+          <input type="submit" class="btn btn-primary positivebutton" value="Update Profile"></td>
+      </tr>
+    </table>
+    </table>
+  </form>
+</div>

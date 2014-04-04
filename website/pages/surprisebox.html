@@ -1,0 +1,34 @@
+<div id="giftbox" ng-controller="giftboxcontroller">
+  <div class="form-heading">Thank You Very Much </div>
+  <center>
+    <div data-toggle="modal" data-target="#myModal" onclick="giftopen()"><img src="images/christmas-gift-box.png" style="cursor:pointer;"/></div>
+  </center>
+  <div class="form-heading">Click on box to open it</div>
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title" id="myModalLabel">Tada! Take it!! </h4>
+        </div>
+        <div class="modal-body">
+          <table cellpadding="7">
+            <tr>
+              <td ng-repeat="gift in gifts"><img src={{gift.url}} title={{gift.title}} /></td>
+            </tr>
+          </table>
+          <br />
+          <br />
+          <br />
+          <div id="giftcontent">
+            <ul >
+              <li ng-repeat="gift in gifts">
+                <p>Tou have earned {{gift.content}} {{gift.context}}</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

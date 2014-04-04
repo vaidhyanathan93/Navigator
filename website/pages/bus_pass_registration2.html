@@ -1,0 +1,25 @@
+<div id="busdetails" ng-controller="bus_pass_registration2">
+<br><center>
+    <font class="form-heading">
+SELECT A BUS</font></center>
+<table width="458" class="table ">
+  <tr >
+  <td>S No</td>
+    <td>Bus No</td>
+    <td>Available Seats</td>
+    <td>Time</td>
+    <td>Cost</td>
+    
+  </tr>
+ <tr class="bus_pass_border" ng-click="onclick()" ng-repeat="buss in buses">
+    <td >{{buss.sno}}</td>
+    <td>{{buss.busno}}</td>
+    <td>{{buss.availableseat}}</td>
+    <td>{{buss.time}}</td>
+    <td>{{buss.cost}}</td>
+  </tr>
+  
+</table>
+
+</div>
+

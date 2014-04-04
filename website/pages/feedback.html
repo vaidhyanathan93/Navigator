@@ -1,0 +1,56 @@
+
+<div id="feedback" ng-controller="feedbackcontroller"> <br>
+  <center>
+    <font class="form-heading">FeedBack</font>
+  </center>
+  <form method="post" ng-submit="processform()" >
+    <table style="height:320px">
+      <tr>
+        <td width="185" class="formlabel">Bus/ Cab No*</td>
+        <td width="389" style="400px"><input type="text" class="form-control form-text-box" name="no" placeholder="Ax98" required="required" ng-model="feedbackdata.no"></td>
+      </tr>
+      <tr>
+        <td class="formlabel" >Vehicle Punctuality</td>
+        <td style="400px"><select name="punctuality" class="form-control form-text-box" ng-model="feedbackdata.punctuality">
+            <option value=""></option>
+            <option value="intime">In Time</option>
+            <option value="ontime">On Time</option>
+            <option value="late">Late</option>
+          </select></td>
+      </tr>
+      <tr>
+        <td class="formlabel">How Was Your Journey</td>
+        <td style="400px"><select name="jouney" class="form-control form-text-box" ng-model="feedbackdata.satisfaction">
+            <option value=""></option>
+            <option value="good">Good</option>
+            <option value="satisfactory">Satisfactory</option>
+            <option value="bad">Bad</option>
+          </select></td>
+      <tr>
+        <td class="formlabel">Rate the Vehicle*</td>
+        <td style="400px"><input type="radio" name="buspasstype" value="1" class="formlabel" required="required" ng-model="feedbackdata.rate">
+          1 &nbsp;
+          <input type="radio" name="buspasstype" value="2" ng-model="feedbackdata.rate">
+          2 &nbsp;
+          <input type="radio" name="buspasstype" value="3" ng-model="feedbackdata.rate">
+          3 &nbsp;
+          <input type="radio" name="buspasstype" value="4" ng-model="feedbackdata.rate">
+          4 &nbsp;
+          <input type="radio" name="buspasstype" value="5" ng-model="feedbackdata.rate">
+          5 &nbsp; </td>
+      </tr>
+      <tr>
+        <td class="formlabel">Comments/Complaints</td>
+        <td style="400px"><textarea rows="3" id="textarea" name="comment" class="form-control form-text-box" placeholder="Comments here" ng-model="feedbackdata.comments" ></textarea></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><input type="submit" id="button" class="btn btn-primary positivebutton" value="SUBMIT FEEDBACK"></td>
+      </tr>
+    </table>
+  </form>
+  <pre>
+  {{feedbackdata}}//for testing oly
+  {{retrundata}}
+  </pre>
+</div>

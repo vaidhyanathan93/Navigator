@@ -1,0 +1,13 @@
+<!doctype html>
+<html ng-app>
+  <head>
+    <script src="js/angular.min.js"></script>
+    <script src="js/todos.js"></script>
+  </head>
+  <body>
+    <h1>To do list is here</h1>
+    <div ng-controller="TodoList">
+    <h1>{{remaining()}} of {{todos.length}} remaining in todo list</h1>
+    </div>
+  </body>
+</html>

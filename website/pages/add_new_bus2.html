@@ -1,0 +1,42 @@
+<div id="add_new_bus2" ng-controller="add_new_bus2controller">
+<center>
+<div class="form-heading">Route For bus
+</div></center>
+  <table width="623" border="0" cellpadding="7">
+    <tr>
+      <td width="184">Route Number</td>
+      <td width="174">To Offcie</td>
+      <td width="194">To Home</td>
+      <td width="5"></td><td></td>
+    </tr>
+    <tr ng-repeat="route in routes">
+      <td><div class="input-group"> <span class="input-group-addon form-text-box-icon"><span class="glyphicon glyphicon-font "></span></span>
+          <input type="text" class="form-control form-text-box" name="routeid" ng-model="route.route" placeholder="Route Number">
+        </div></td>
+      <td><div class="input-group"> <span class="input-group-addon form-text-box-icon"><span class="glyphicon glyphicon-time "></span></span>
+          <input type="text" class="form-control form-text-box" name="fromtime" ng-model="route.totime" placeholder="Time">
+        </div></td>
+      <td><div class="input-group"> <span class="input-group-addon form-text-box-icon"><span class="glyphicon glyphicon-time "></span></span>
+          <input type="text" class="form-control form-text-box" name="totime" ng-model="route.fromtime" placeholder="Time">
+        </div></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><div class="input-group"> <span class="input-group-addon form-text-box-icon"><span class="glyphicon glyphicon-font "></span></span>
+          <input type="text" class="form-control form-text-box" name="routeid" ng-model="route" placeholder="Route Number">
+        </div></td>
+      <td><div class="input-group"> <span class="input-group-addon form-text-box-icon"><span class="glyphicon glyphicon-time "></span></span>
+          <input type="text" class="form-control form-text-box" name="fromtime" ng-model="totime" placeholder="Time">
+        </div></td>
+      <td><div class="input-group"> <span class="input-group-addon form-text-box-icon"><span class="glyphicon glyphicon-time "></span></span>
+          <input type="text" class="form-control form-text-box" name="totime" ng-model="fromtime" placeholder="Time">
+        </div></td>
+      
+      <td><a ng-click="addroute()"><span style="cursor:pointer; color:#3F3;" class="glyphicon glyphicon-ok "></span></a></td>
+    </tr>
+  </table>
+  <input type="button" class="btn btn-primary positivebutton" value="finish" ng-click="finish()">
+  
+ 
+  
+</div>

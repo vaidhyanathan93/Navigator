@@ -1,0 +1,86 @@
+
+<div id="cabregistration" style="position:relative; top:-25px;" ng-controller="cab_registration"> <br>
+  <center>
+    <font class="form-heading">CAB DETAILS</font>
+  </center>
+  <table style="height:400px" cellspacing="5" cellpadding="5">
+  
+   <form id="form1" name="form1" method="post">
+      <tr>
+        <td><font class="formlabel">Go Green</font></td>
+        <td><div class="btn-group btn-toggle">
+            <button class="btn btn-primary active">ON</button>
+            <button class="btn btn-default">OFF</button>
+          </div></td>
+      </tr>
+      <tr>
+        <td style="width:250px"><font class="formlabel">City</font></td>
+          <td><div class="input-group"> <span class="input-group-addon form-text-box-icon"><span class="glyphicon glyphicon-road "></span></span>
+            <input type="text" class="form-control form-text-box" name="pickuppoint" ng-model="cab.city">
+          </div></td>
+      </tr>
+      <tr>
+        <td style="width:250px"><font class="formlabel" >Pick Up Point</font></td>
+        <td style="400px"><div class="input-group"> <span class="input-group-addon form-text-box-icon"><span class="glyphicon glyphicon-map-marker "></span></span>
+            <input type="text" class="form-control form-text-box" name="pickuppoint" ng-model="cab.pick_up_point">
+          </div></td>
+      </tr>
+      <tr>
+        <td style="width:250px"><font class="formlabel">Destination</font></td>
+        <td style="400px"><div class="input-group"> <span class="input-group-addon form-text-box-icon"><span class="glyphicon glyphicon-map-marker "></span></span>
+            <input type="text" class="form-control form-text-box" ng-model="cab.destination" name="destination">
+          </div></td>
+      </tr>
+      <tr>
+        <td style="width:250px"><font class="formlabel">Mobile</font></td>
+        <td style="400px"><div class="input-group"> <span class="input-group-addon form-text-box-icon"><span class="glyphicon glyphicon-earphone "></span></span>
+            <input type="text" class="form-control form-text-box" ng-model="cab.mobile" name="mobile">
+          </div></td>
+      </tr>
+      <tr id="cabtypedis">
+        <td style="width:250px"><font class="formlabel">Cab Type</font></td>
+        <td style="400px"><select name="preivilegeduser" class="form-control form-text-box" id="prevelegeduser"ng-model="cab.type" style="width:160px;">
+              <option value="1">Single</option>
+             <option value="2">Two</option>
+             <option value="3">Three</option>
+             <option value="4" selected="selected">Four</option>
+            </select>
+         </td>
+      </tr>
+      <tr>
+        <td style="width:250px"><font class="formlabel">Date</font></td>
+        <td style="400px"><div class="input-group"> <span class="input-group-addon form-text-box-icon"><span class="glyphicon glyphicon-calendar "></span></span>
+            <input type="text" class="form-control form-text-box" name="from" id="fromdate" ng-model="cab.from">
+          </div></td>
+      </tr>
+        <tr>
+        <td style="width:250px"><font class="formlabel">Time</font></td>
+        <td style="400px"><div class="input-group"> <span class="input-group-addon form-text-box-icon"><span class="glyphicon glyphicon-time "></span></span>
+            <input type="text" class="form-control form-text-box" name="from" id="fromtime" ng-model="cab.pickuptime">
+          </div></td>
+      </tr>
+      <tr>
+        <td style="width:250px"><font class="formlabel">Privileged User </font></td>
+        <td style="400px"><div class="input-group"> <span class="input-group-addon form-text-box-icon"><span class="glyphicon glyphicon-user"></span></span>
+            <select name="preivilegeduser" class="form-control form-text-box" id="prevelegeduser"ng-model="cab.previlidged" style="width:160px;">
+              <option value="no" selected="selected">No</option>
+              <option value="yes">Yes</option>
+            </select>
+          </div></td>
+      </tr>
+      <tr  id="commentpre">
+        <td><font class="formlabel">Comment</font> &nbsp;</td>
+        <td><div class="input-group"> <span class="input-group-addon form-text-box-icon"><span class="glyphicon glyphicon-comment "></span></span>
+            <textarea class="form-control form-text-box" name="comment" ng-model="cab.comment"></textarea>
+          </div></td>
+      </tr>
+      <tr>
+        <td ></td>
+        <td><button type="submit" class="btn btn-primary positivebutton"  ng-click="onsubmit()">Next</button></td>
+      </tr>
+    </form>
+  </table>
+  <pre>
+  {{cab}}//for testing oly
+  </pre>
+</div>
