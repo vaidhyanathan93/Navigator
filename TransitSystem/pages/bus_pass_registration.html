@@ -1,0 +1,79 @@
+
+<div id="buspassregistration" style="position:relative; top:-25px;" ng-controller="bus_pass_registration"> <br>
+  <center>
+    <font class="form-heading">BUS PASS DETAILS</font>
+  </center>
+  <table style="height:400px" cellspacing="5" cellpadding="5">
+  
+   <form id="form1" name="form1" method="post">
+      <tr>
+        <td><font class="formlabel">Go Green</font></td>
+        <td><div class="btn-group btn-toggle">
+            <button class="btn btn-primary active">ON</button>
+            <button class="btn btn-default">OFF</button>
+          </div></td>
+      </tr>
+      <tr>
+        <td style="width:250px"><font class="formlabel">City</font></td>
+       <td><div class="input-group"> <span class="input-group-addon form-text-box-icon"><span class="glyphicon glyphicon-road "></span></span>
+            <input type="text" class="form-control form-text-box" name="pickuppoint" ng-model="bus.city">
+          </div></td>
+      </tr>
+      <tr>
+        <td style="width:250px"><font class="formlabel" >Pick Up Point</font></td>
+        <td style="400px"><div class="input-group"> <span class="input-group-addon form-text-box-icon"><span class="glyphicon glyphicon-map-marker "></span></span>
+            <input type="text" class="form-control form-text-box" name="pickuppoint" ng-model="bus.pick_up_point">
+          </div></td>
+      </tr>
+      <tr>
+        <td style="width:250px"><font class="formlabel">Destination</font></td>
+        <td style="400px"><div class="input-group"> <span class="input-group-addon form-text-box-icon"><span class="glyphicon glyphicon-map-marker "></span></span>
+            <input type="text" class="form-control form-text-box" ng-model="bus.destination" name="destination">
+          </div></td>
+      </tr>
+      <tr>
+        <td style="width:250px"><font class="formlabel">Mobile</font></td>
+        <td style="400px"><div class="input-group"> <span class="input-group-addon form-text-box-icon"><span class="glyphicon glyphicon-earphone "></span></span>
+            <input type="text" class="form-control form-text-box" ng-model="bus.mobile" name="mobile">
+          </div></td>
+      </tr>
+      <tr id="buspasstypedis">
+        <td style="width:250px"><font class="formlabel">Bus Pass Type</font></td>
+        <td style="400px"><input type="radio" name="buspasstype" value="daily" id="buspasstype" ng-model="bus.type">
+          <font class="formlabel">Daily</font> &nbsp;
+          <input type="radio" name="buspasstype" value="weekly" ng-model="bus.type">
+          <font class="formlabel">Weekly</font> &nbsp;
+          <input type="radio" name="buspasstype" value="monthly" checked="checked" ng-model="bus.type">
+          <font class="formlabel">Monthly</font> &nbsp; </td>
+      </tr>
+      <tr>
+        <td style="width:250px"><font class="formlabel">From </font></td>
+        <td style="400px"><div class="input-group"> <span class="input-group-addon form-text-box-icon"><span class="glyphicon glyphicon-calendar "></span></span>
+            <input type="text" class="form-control form-text-box" name="from" id="fromdate" ng-model="bus.from">
+          </div></td>
+      </tr>
+      <tr>
+        <td style="width:250px"><font class="formlabel">Privileged User </font></td>
+        <td style="400px"><div class="input-group"> <span class="input-group-addon form-text-box-icon"><span class="glyphicon glyphicon-user"></span></span>
+            <select name="preivilegeduser" class="form-control form-text-box" id="prevelegeduser" ng-model="bus.previlidged" style="width:160px;">
+              <option value="no" selected="selected">No</option>
+              <option value="yes">Yes</option>
+            </select>
+          </div></td>
+      </tr>
+      <tr  id="commentpre">
+        <td><font class="formlabel">Comment</font> &nbsp;</td>
+        <td><div class="input-group"> <span class="input-group-addon form-text-box-icon"><span class="glyphicon glyphicon-comment "></span></span>
+            <textarea class="form-control form-text-box" name="comment" ng-model="bus.comment"></textarea>
+          </div></td>
+      </tr>
+      <tr>
+        <td ></td>
+        <td><button type="submit" class="btn btn-primary positivebutton"  ng-click="onsubmit()">Next</button></td>
+      </tr>
+    </form>
+  </table>
+  <pre>
+  {{bus}}//for testing oly
+  </pre>
+</div>

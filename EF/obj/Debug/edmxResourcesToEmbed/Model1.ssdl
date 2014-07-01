@@ -1,0 +1,331 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tbl_Associate">
+    <Key>
+      <PropertyRef Name="associate_id" />
+    </Key>
+    <Property Name="associate_id" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="associate_name" Type="nvarchar" MaxLength="50" />
+    <Property Name="address" Type="nvarchar" MaxLength="50" />
+    <Property Name="city" Type="nvarchar" MaxLength="50" />
+    <Property Name="phone_no" Type="nvarchar" MaxLength="50" />
+    <Property Name="email" Type="nvarchar" MaxLength="50" />
+    <Property Name="bus_pass_id" Type="int" />
+    <Property Name="cab_request_id" Type="int" />
+  </EntityType>
+  <EntityType Name="tbl_Bus">
+    <Key>
+      <PropertyRef Name="bus_no" />
+    </Key>
+    <Property Name="bus_no" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="route_no" Type="nvarchar" MaxLength="50" />
+    <Property Name="city" Type="nvarchar" MaxLength="50" />
+    <Property Name="capacity" Type="int" />
+    <Property Name="available_seats" Type="int" />
+  </EntityType>
+  <EntityType Name="tbl_BusPass">
+    <Key>
+      <PropertyRef Name="bus_pass_id" />
+    </Key>
+    <Property Name="bus_pass_id" Type="int" Nullable="false" />
+    <Property Name="associate_id" Type="nvarchar" MaxLength="50" />
+    <Property Name="bus_no" Type="nvarchar" MaxLength="50" />
+    <Property Name="associate_mobile" Type="nvarchar" MaxLength="50" />
+    <Property Name="city" Type="nvarchar" MaxLength="50" />
+    <Property Name="pick_up_point" Type="nvarchar" MaxLength="50" />
+    <Property Name="ffrom" Type="nvarchar" MaxLength="50" />
+    <Property Name="privileged_user" Type="int" />
+    <Property Name="comment" Type="nvarchar" MaxLength="50" />
+    <Property Name="bus_pass_type" Type="nvarchar" MaxLength="50" />
+    <Property Name="go_green" Type="int" />
+    <Property Name="issued_on" Type="nvarchar" MaxLength="50" />
+    <Property Name="valid_till" Type="nvarchar" MaxLength="50" />
+    <Property Name="destination" Type="nvarchar" MaxLength="50" />
+    <Property Name="cost" Type="int" />
+  </EntityType>
+  <EntityType Name="tbl_Cab">
+    <Key>
+      <PropertyRef Name="cab_no" />
+    </Key>
+    <Property Name="cab_no" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="cab_model" Type="nvarchar" MaxLength="50" />
+    <Property Name="capacity" Type="int" />
+    <Property Name="available_seats" Type="int" />
+    <Property Name="driver_name" Type="nvarchar" MaxLength="50" />
+    <Property Name="driver_mobile" Type="nvarchar" MaxLength="50" />
+    <Property Name="area" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tbl_CabRequest">
+    <Key>
+      <PropertyRef Name="cab_request_id" />
+    </Key>
+    <Property Name="cab_request_id" Type="int" Nullable="false" />
+    <Property Name="associate_id" Type="nvarchar" MaxLength="50" />
+    <Property Name="cab_no" Type="nvarchar" MaxLength="50" />
+    <Property Name="date" Type="nvarchar" MaxLength="50" />
+    <Property Name="time" Type="nvarchar" MaxLength="50" />
+    <Property Name="pick_up_point" Type="nvarchar" MaxLength="50" />
+    <Property Name="destination" Type="nvarchar" MaxLength="50" />
+    <Property Name="city" Type="nvarchar" MaxLength="50" />
+    <Property Name="associate_mobile" Type="nvarchar" MaxLength="50" />
+    <Property Name="go_green" Type="int" />
+    <Property Name="privileged_user" Type="int" />
+    <Property Name="comment" Type="nvarchar" MaxLength="50" />
+    <Property Name="cab_type" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tbl_Feedback">
+    <Key>
+      <PropertyRef Name="feedback_id" />
+    </Key>
+    <Property Name="feedback_id" Type="int" Nullable="false" />
+    <Property Name="vehicle_no" Type="nvarchar" MaxLength="50" />
+    <Property Name="vehicle_punctuality" Type="nvarchar" MaxLength="50" />
+    <Property Name="journey" Type="nvarchar" MaxLength="50" />
+    <Property Name="feedback" Type="nvarchar" MaxLength="50" />
+    <Property Name="rating" Type="int" />
+  </EntityType>
+  <EntityType Name="tbl_Gamer">
+    <Key>
+      <PropertyRef Name="associate_id" />
+    </Key>
+    <Property Name="associate_id" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="game_level" Type="int" />
+    <Property Name="coins_earned" Type="int" />
+    <Property Name="item_id" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tbl_Help">
+    <Key>
+      <PropertyRef Name="help_id" />
+    </Key>
+    <Property Name="help_id" Type="int" Nullable="false" />
+    <Property Name="question" Type="nvarchar" MaxLength="50" />
+    <Property Name="answer" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tbl_Login">
+    <Key>
+      <PropertyRef Name="associate_id" />
+    </Key>
+    <Property Name="associate_id" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="password" Type="nvarchar" MaxLength="50" />
+    <Property Name="first_login" Type="int" />
+    <Property Name="admin" Type="int" />
+  </EntityType>
+  <EntityType Name="tbl_Message">
+    <Key>
+      <PropertyRef Name="message_id" />
+    </Key>
+    <Property Name="message_id" Type="int" Nullable="false" />
+    <Property Name="associate_id" Type="nvarchar" MaxLength="50" />
+    <Property Name="message" Type="nvarchar" MaxLength="50" />
+    <Property Name="time" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tbl_Notification">
+    <Key>
+      <PropertyRef Name="notification_id" />
+    </Key>
+    <Property Name="notification_id" Type="int" Nullable="false" />
+    <Property Name="associate_id" Type="nvarchar" MaxLength="50" />
+    <Property Name="notification" Type="nvarchar" MaxLength="50" />
+    <Property Name="time" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tbl_Route">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="route_no" Type="nvarchar" MaxLength="50" />
+    <Property Name="location" Type="nvarchar" MaxLength="50" />
+    <Property Name="time" Type="nvarchar" MaxLength="50" />
+    <Property Name="cost" Type="int" />
+  </EntityType>
+  <EntityType Name="tbl_Store">
+    <Key>
+      <PropertyRef Name="item_id" />
+    </Key>
+    <Property Name="item_id" Type="int" Nullable="false" />
+    <Property Name="item_name" Type="nvarchar" MaxLength="50" />
+    <Property Name="description" Type="nvarchar" MaxLength="50" />
+    <Property Name="coins" Type="int" />
+  </EntityType>
+  <Function Name="usp_AddBus" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="bus_no" Type="nvarchar" Mode="In" />
+    <Parameter Name="route_no" Type="nvarchar" Mode="In" />
+    <Parameter Name="city" Type="nvarchar" Mode="In" />
+    <Parameter Name="capacity" Type="int" Mode="In" />
+  </Function>
+  <Function Name="usp_AddBusPass" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="associate_id" Type="nvarchar" Mode="In" />
+    <Parameter Name="bus_no" Type="nvarchar" Mode="In" />
+    <Parameter Name="bus_pass_type" Type="nvarchar" Mode="In" />
+    <Parameter Name="address" Type="nvarchar" Mode="In" />
+    <Parameter Name="city" Type="nvarchar" Mode="In" />
+    <Parameter Name="pick_up_point" Type="nvarchar" Mode="In" />
+    <Parameter Name="destination" Type="nvarchar" Mode="In" />
+    <Parameter Name="mobile" Type="nvarchar" Mode="In" />
+    <Parameter Name="privileged_user" Type="int" Mode="In" />
+    <Parameter Name="issued_on" Type="nvarchar" Mode="In" />
+    <Parameter Name="go_green" Type="int" Mode="In" />
+    <Parameter Name="comment" Type="nvarchar" Mode="In" />
+    <Parameter Name="valid_till" Type="nvarchar" Mode="In" />
+    <Parameter Name="cost" Type="int" Mode="In" />
+  </Function>
+  <Function Name="usp_AddCab" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="cab_no" Type="nvarchar" Mode="In" />
+    <Parameter Name="cab_model" Type="nvarchar" Mode="In" />
+    <Parameter Name="capacity" Type="int" Mode="In" />
+    <Parameter Name="area" Type="nvarchar" Mode="In" />
+    <Parameter Name="driver_name" Type="nvarchar" Mode="In" />
+    <Parameter Name="driver_mobile" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="usp_AddCabRequest" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="cab_no" Type="nvarchar" Mode="In" />
+    <Parameter Name="associate_id" Type="nvarchar" Mode="In" />
+    <Parameter Name="mobile" Type="nvarchar" Mode="In" />
+    <Parameter Name="city" Type="nvarchar" Mode="In" />
+    <Parameter Name="pick_up_point" Type="nvarchar" Mode="In" />
+    <Parameter Name="destination" Type="nvarchar" Mode="In" />
+    <Parameter Name="date" Type="nvarchar" Mode="In" />
+    <Parameter Name="time" Type="nvarchar" Mode="In" />
+    <Parameter Name="privileged_user" Type="int" Mode="In" />
+    <Parameter Name="go_green" Type="int" Mode="In" />
+    <Parameter Name="comment" Type="nvarchar" Mode="In" />
+    <Parameter Name="cab_type" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="usp_AddFeedback" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="vehicle_no" Type="nvarchar" Mode="In" />
+    <Parameter Name="punctuality" Type="nvarchar" Mode="In" />
+    <Parameter Name="rating" Type="int" Mode="In" />
+    <Parameter Name="feedback" Type="nvarchar" Mode="In" />
+    <Parameter Name="journey" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="usp_AddRoute" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="route_no" Type="nvarchar" Mode="In" />
+    <Parameter Name="location" Type="nvarchar" Mode="In" />
+    <Parameter Name="time" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="usp_BuyItem" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="associate_id" Type="nvarchar" Mode="In" />
+    <Parameter Name="item_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="usp_CancelBusPass" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="bus_pass_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="usp_CancelCabRequest" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="cab_request_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="usp_DeleteBus" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="bus_no" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="usp_DeleteCab" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="cab_no" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="usp_DisplayBusStats" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="usp_DisplayCabStats" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="usp_DisplayHelp" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="usp_DisplayMessage" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="associate_id" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="usp_DisplayNotification" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="associate_id" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="usp_DisplayRanking" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="usp_GetAssociateDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="associate_id" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="usp_GetBus" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="bus_no" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="usp_GetBusPass" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="associate_id" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="usp_GetCab" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="cab_no" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="usp_GetCabStatus" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="associate_id" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="usp_GetFreeUnsharedCab" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="city" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="usp_GetLoginDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="usp_GetRoute" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="route_no" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="usp_GetSharedFreeCab" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="city" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="usp_InsertMessage" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="associate_id" Type="nvarchar" Mode="In" />
+    <Parameter Name="message" Type="nvarchar" Mode="In" />
+    <Parameter Name="time" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="usp_InsertNotification" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="associate_id" Type="nvarchar" Mode="In" />
+    <Parameter Name="notification" Type="nvarchar" Mode="In" />
+    <Parameter Name="time" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="usp_ModifyBus" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="bus_no" Type="nvarchar" Mode="In" />
+    <Parameter Name="route_no" Type="nvarchar" Mode="In" />
+    <Parameter Name="city" Type="nvarchar" Mode="In" />
+    <Parameter Name="capacity" Type="int" Mode="In" />
+  </Function>
+  <Function Name="usp_ModifyRoute" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="route_no" Type="nvarchar" Mode="In" />
+    <Parameter Name="location" Type="nvarchar" Mode="In" />
+    <Parameter Name="time" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="usp_RenewBusPass" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="bus_pass_id" Type="int" Mode="In" />
+    <Parameter Name="period" Type="int" Mode="In" />
+  </Function>
+  <Function Name="usp_SearchBusSchedule" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="bus_no" Type="nvarchar" Mode="In" />
+    <Parameter Name="route_no" Type="nvarchar" Mode="In" />
+    <Parameter Name="location" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="usp_SearchCab" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="cab_no" Type="nvarchar" Mode="In" />
+    <Parameter Name="cab_model" Type="nvarchar" Mode="In" />
+    <Parameter Name="area" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="usp_SelectABus" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="pick_up_point" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="usp_test" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="area" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="usp_UpdateAssociateDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="associate_id" Type="nvarchar" Mode="In" />
+    <Parameter Name="associate_name" Type="nvarchar" Mode="In" />
+    <Parameter Name="address" Type="nvarchar" Mode="In" />
+    <Parameter Name="city" Type="nvarchar" Mode="In" />
+    <Parameter Name="mobile" Type="nvarchar" Mode="In" />
+    <Parameter Name="email" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="usp_UpdateCab" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="cab_no" Type="nvarchar" Mode="In" />
+    <Parameter Name="cab_model" Type="nvarchar" Mode="In" />
+    <Parameter Name="capacity" Type="int" Mode="In" />
+    <Parameter Name="area" Type="nvarchar" Mode="In" />
+    <Parameter Name="driver_name" Type="nvarchar" Mode="In" />
+    <Parameter Name="driver_mobile" Type="nvarchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="ModelStoreContainer">
+    <EntitySet Name="tbl_Associate" EntityType="Self.tbl_Associate" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Bus" EntityType="Self.tbl_Bus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_BusPass" EntityType="Self.tbl_BusPass" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Cab" EntityType="Self.tbl_Cab" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_CabRequest" EntityType="Self.tbl_CabRequest" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Feedback" EntityType="Self.tbl_Feedback" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Gamer" EntityType="Self.tbl_Gamer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Help" EntityType="Self.tbl_Help" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Login" EntityType="Self.tbl_Login" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Message" EntityType="Self.tbl_Message" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Notification" EntityType="Self.tbl_Notification" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Route" EntityType="Self.tbl_Route" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Store" EntityType="Self.tbl_Store" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

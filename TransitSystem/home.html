@@ -1,0 +1,91 @@
+<html id="ng-app" ng-app="NavigatorApp" ng-controller="WelcomeController">
+<head>
+<title>HOME PAGE</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="css/custom.css" rel="stylesheet" type="text/css">
+<link href="css/jquery-ui-1.10.4.custom.min.css" rel="stylesheet" type="text/css">
+<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+<script src="js/jquery-1.10.2.js"></script>
+<script src="js/jquery-ui-1.10.4.custom.min.js"></script>
+<script src="js/angular.min.js"></script>
+<script src="js/angularroute.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/custom.js"></script>
+<script src="js/customangjs.js"></script>
+<script src="controller/feedback.js"></script>
+<script src="controller/dashboard.js"></script>
+<script src="controller/editdashboard.js"></script>
+<script src="controller/bus.js"></script>
+<script src="controller/store.js"></script>
+<script src="controller/buss_pass_registration.js"></script>
+<script src="controller/buss_pass_registration2.js"></script>
+<script src="controller/bus_pass_registration3.js"></script>
+<script src="controller/bus_pass.js"></script>
+<script src="controller/cab.js"></script>
+<script src="controller/cab_registration.js"></script>
+    <script src="controller/cab_registration2.js"></script>
+<script src="controller/cab_status.js"></script>
+<script src="controller/ranking.js"></script>
+<script src="controller/bus_schedule.js"></script>
+<script src="controller/admin.js"></script>
+<script src="controller/bus_management.js"></script>
+<script src="controller/finley.js"></script>
+<script src="controller/add_new_bus.js"></script>
+<script src="controller/add_new_bus2.js"></script>
+<script src="controller/add_new_bus3.js"></script>
+<script src="controller/modify_bus_details.js"></script>
+<script src="controller/modify_bus_details2.js"></script>
+<script src="controller/modify_bus_details3.js"></script>
+<script src="controller/modify_bus_details4.js"></script>
+<script src="controller/cab_management.js"></script>
+<script src="controller/add_new_cab.js"></script>
+<script src="controller/modify_cab_details.js"></script>
+<script src="controller/modify_cab_details2.js"></script>
+<script src="controller/modify_cab_details3.js"></script>
+<script src="controller/bus_usage_statistics.js"></script>
+<script src="controller/cab_usage_statistics.js"></script>
+<script src="controller/surprisebox.js"></script>
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+</head>
+<body class="homebody" >
+<div id="toppane">
+  <table style="height:100px">
+    <tr>
+      <td width="92"><a href="#dashboard" id="dashboard"><img src={{usr.url}} class="mainicon"></a></td>
+      <td width="189" align="center"><span class="welcome"> Welcome</span> <br>
+        <span class="name" >{{usr.name}}</span></td>
+      <td width="66"></td>
+      <td width="92" id="feedback"><a href="#feedback"><img src="images/feedback.png" class="mainicon" title="feedback" data-toggle="tooltip" data-placement="bottom"></a></td>
+      <td width="92" id="help"><a href="#help"><img src="images/help.png" class="mainicon" title="Help" data-toggle="tooltip" data-placement="bottom"></a></td>
+      <td width="92" id="admin"><a href="#admin"><img src="images/admin.png" class="mainicon" title="adminpanel" data-toggle="tooltip" data-placement="bottom"></a></td>
+      <td width="163"></td>
+      <td width="59" class="notification"><img src="images/message4.png" title="Message" data-toggle="tooltip" data-placement="bottom" id="message"></td>
+      <td width="69" class="notification" ><img src="images/notification2.png" title="Notification" data-toggle="tooltip" data-placement="bottom" id="notification"></td>
+    </tr>
+  </table>
+</div>
+<div id="leftpane">
+  <table style="height:476px">
+    <tr><a href="#"><img src="images/home3.png" class="mainicon" id="home" title="Home" data-toggle="tooltip" data-placement="right"></a ></tr>
+    <tr><a href="#bus"><img src="images/bus2.png" name="bus" class="mainicon" id="bus" title="Bus" data-toggle="tooltip" data-placement="right"></a></tr>
+    <tr> <a href="#cab"><img src="images/car2.png" name="cab" class="mainicon" id="cab" title="Cab" data-toggle="tooltip" data-placement="right"></a></tr>
+    <tr><a href="#ranking"><img src="images/ranking2.png" name="ranking" class="mainicon" id="ranking" title="Ranking" data-toggle="tooltip" data-placement="right"></a></tr>
+    <tr><a href="#store"><img src="images/store.png" name="store" class="mainicon" id="store" title="Store" data-toggle="tooltip" data-placement="right"></a></tr>
+  </table>
+</div>
+<a href="#finley"><img src="images/finley.png" class="finley"alt="Finley" title="Finley" data-toggle="tooltip" id="finley" data-placement="top"></a>
+
+<div id="maindialog"> <a href="#"> <span class="glyphicon glyphicon-remove" id="closeicon"></span></a>
+  <div class="maincontent" style="background-image:url({{usr.theme}}); background-repeat:no-repeat; background-position:center; ">
+
+    <center>
+      <div  id="maincontent1" style="background-color:rgba(0,0,0,0.5) !important">
+        <div ng-view> </div>
+      </div>
+      </center>
+        
+  </div>
+</div>
+<div id="notificationdialog"></div>
+<img src="images/rightdrop.png" id="drop" alt="updrop">
+</html>

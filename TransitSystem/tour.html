@@ -1,0 +1,223 @@
+<html id="ng-app" ng-app="NavigatorApp" ng-controller="WelcomeController">
+<head>
+<title>HOME PAGE</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="css/custom.css" rel="stylesheet" type="text/css">
+<link href="css/jquery-ui-1.10.4.custom.min.css" rel="stylesheet" type="text/css">
+<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+<script src="js/jquery-1.10.2.js"></script>
+<script src="js/jquery-ui-1.10.4.custom.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular-route.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/custom.js"></script>
+<script src="js/customangjs.js"></script>
+<style type="text/css">
+
+.popover-title {
+    color: #FFF;
+    font-size: 15px;
+}
+.popover-content {
+    color:#FFF;
+	background-color:rgba(0,0,102,1);
+    font-size: 15px;
+}
+</style>
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+</head>
+<body class="homebody" >
+<div id="toppane">
+  <table style="height:100px">
+    <tr>
+      <td width="92"><a id="dashboard" data-container="body" data-toggle="popover" data-placement="right" data-content="click to edit your profile"><img src="images/associate.png" class="mainicon"></a></td>
+      <td width="189" align="center"><span class="welcome"> Welcome</span> <br>
+        <span class="name" >Associate</span></td>
+      <td width="66"></td>
+      <td width="92"><a id="feedback" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Improve system by providing feedback"><img src="images/feedback.png" class="mainicon"  ></a></td>
+      <td width="92"><a id="help" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Conatins Frequenty asked questions"><img src="images/help.png" class="mainicon" title="Help" data-toggle="tooltip" data-placement="bottom"></a></td>
+      <td width="92"><a id="admin" data-container="body" data-toggle="popover" data-placement="bottom" data-content="all your admin controls will be there"><img src="images/admin.png" class="mainicon" title="adminpanel" data-toggle="tooltip" data-placement="bottom"></a></td>
+      <td width="163"></td>
+      <td width="59" class="notification"><a id="message" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Your Message from Admin will be here"><img src="images/message4.png" title="Message" data-toggle="tooltip" data-placement="bottom"></a></td>
+      <td width="69" class="notification"><a id="notification" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Notification regarding system"><img src="images/notification2.png" title="Notification" data-toggle="tooltip" data-placement="bottom"></a></td>
+    </tr>
+  </table>
+</div>
+<div id="leftpane">
+  <table style="height:476px">
+    <tr><a id="home" data-container="body" data-toggle="popover" data-placement="right" data-content="Return back to home from anywhere"><img src="images/home3.png" class="mainicon" id="home" title="Home" data-toggle="tooltip" data-placement="right"></a ></tr>
+    <tr><a id="bus" data-container="body" data-toggle="popover" data-placement="right" data-content="Bus book/cancellation/modification/renew/schedule here"><img src="images/bus2.png" name="bus" class="mainicon" id="bus" title="Bus" data-toggle="tooltip" data-placement="right"></a></tr>
+    <tr> <a id="cab" data-container="body" data-toggle="popover" data-placement="right" data-content="Cab book/ cancellation"><img src="images/car2.png" name="cab" class="mainicon" id="cab" title="Cab" data-toggle="tooltip" data-placement="right"></a></tr>
+    <tr><a id="ranking" data-container="body" data-toggle="popover" data-placement="right" data-content="Know your and others ranking"><img src="images/ranking2.png" name="ranking" class="mainicon" id="ranking" title="Ranking" data-toggle="tooltip" data-placement="right"></a></tr>
+    <tr><a id="store" data-container="body" data-toggle="popover" data-placement="right" data-content="Buy stuffs from store here"><img src="images/store.png" name="store" class="mainicon" id="store" title="Store" data-toggle="tooltip" data-placement="right"></a></tr>
+  </table>
+</div>
+<a id="finley" data-container="body" data-toggle="popover" data-placement="right" data-content="Buy stuffs from store here"><img src="images/finley.png" class="finley"></a>
+
+
+<div id="maindialog"> 
+  <div class="maincontent" style="background-image:url({{usr.theme}}); background-repeat:no-repeat; background-position:center; ">
+
+    <center>
+      <div  id="maincontent1" >
+<div id="tour" style="vertical-align:central;">
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<div id="tour_bob">
+<img src="images/associate.png"  class="img-circle" style="float:left; width:100px;">
+      </div>
+<div id="tour_content" style="font-size:18px;"></div>
+
+<div id="tour_girl">
+<img src="images/girl speech.png"  class="img-circle" style="float:right; width:100px;">
+      </div>
+     
+</div>
+      </center>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <a onClick="skip()" style="color:#930; position:relative; left:100px; font-size:24px; cursor:pointer;">Skip >></a>
+      <input type="button" class="btn btn-primary positivebutton" value="Next" onClick="nextcov()" style="float:right; position:relative; left:-100px">  
+  </div>
+ 
+</div>
+
+<img src="images/rightdrop.png" id="drop" alt="updrop">
+<script>
+function skip(){
+	$('#maindialog').hide();
+	next();
+	}
+opendialog($('#home'));
+var kj=0;
+nextcov();
+
+function nextcov(){
+	
+	kj++;
+	
+	if(kj%2!=0){
+	$("#tour_bob").hide();
+	$("#tour_girl").show();}
+	else{
+		$("#tour_bob").show();
+	$("#tour_girl").hide();
+		}
+	switch(kj){
+		case 1:
+		$("#tour_content").html("That wicked witch destoryed your empire");
+		break;
+		case 2:
+		$("#tour_content").html("I am helpless and i am not havinf anything");
+		break;
+		case 3:
+		$("#tour_content").html("I am goin to give you an land make an army and fight");
+		break;
+		case 4:
+		$("#tour_content").html("Thank you");
+		break;
+		case 5:
+		$("#tour_content").html("Take a tour this will be helpful");
+		break;
+		case 6:
+$('#maindialog').hide();
+		next();
+		break;
+		
+		
+		}
+	
+	}
+</script>
+
+<script>
+$('#feedback').popover('hide');
+$('#help').popover('hide');
+$('#admin').popover('hide');
+$('#message').popover('hide');
+$('#notification').popover('hide');
+$('#home').popover('hide');
+$('#bus').popover('hide');
+$('#cab').popover('hide');
+$('#ranking').popover('hide');
+$('#store').popover('hide');
+$('#finley').popover('hide');
+$('#dashboard').popover('hide');
+var i=0;
+
+function next(){
+	
+	switch(i){
+		case 0:
+		$('#store').popover('show');
+		break;
+	case 1:
+	$('#store').popover('hide');
+	$('#ranking').popover('show');
+	break;
+		
+	case 2:
+	$('#ranking').popover('hide');
+	$('#cab').popover('show');
+	break;	
+	case 3:
+	$('#cab').popover('hide');
+	$('#bus').popover('show');
+	break;	
+	case 4:
+	$('#bus').popover('hide');
+	$('#home').popover('show');
+	break;	
+	case 5:
+	$('#home').popover('hide');
+	$('#dashboard').popover('show');
+	break;	
+	case 6:
+	$('#dashboard').popover('hide');
+	$('#feedback').popover('show');
+	break;	
+	case 7:
+	$('#feedback').popover('hide');
+	$('#help').popover('show');
+	break;	
+	case 8:
+	$('#help').popover('hide');
+	$('#admin').popover('show');
+	break;	
+	case 9:
+	$('#admin').popover('hide');
+	$('#message').popover('show');
+	break;	
+	case 10:
+	$('#message').popover('hide');
+	$('#notification').popover('show');
+	break;	
+	case 11:
+	$('#notification').popover('hide');
+	$('#ranking').popover('show');
+	break;
+	case 12:
+	alert("you will be redirected to main page");
+	window.location.assign("home.html");
+	break;
+	}
+	i++;
+setTimeout(function(){next()},2250);
+}
+
+</script></html>

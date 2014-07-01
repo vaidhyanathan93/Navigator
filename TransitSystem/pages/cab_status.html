@@ -1,0 +1,46 @@
+<div ng-controller="showstatus" style="width:400px;">
+<center>
+    <font class="form-heading">
+CAB STATUS</font></center>
+<table width="340" border="0" class="table formlabel">
+<!--If possible we can do it by AJax or by Angularjs need to add Angularjs-->
+  <tr>
+    <td width="116">Cab Number </td>
+    <td width="214">{{cabstatus.cabno}}</td>
+  </tr>
+  <tr>
+    <td>Pick Up Point </td>
+    <td>{{cabstatus.pickuppoint}}</td>
+  </tr>
+  <tr>
+    <td>Pick Up Date</td>
+    <td>{{cabstatus.pickupdate}}</td>
+  </tr>
+  <tr>
+    <td>Pick Up Time </td>
+    <td>{{cabstatus.pickuptime}}</td>
+  </tr>
+  <tr>
+    <td>Driver Name</td>
+    <td>{{cabstatus.drivername}}</td>
+  </tr>
+  <tr>
+    <td>Driver Mobile</td>
+    <td>{{cabstatus.drivermobile}}</td>
+  </tr>
+   <tr>
+    <td></td>
+    <td>
+    <input type="button" class="btn btn-primary dangerbutton" value="CancelCab" ng-click="oncancel(cabsatus.cabno)"/>
+    </td>
+  </tr>
+</table>
+<ul  class="pagination" style="position:relative; bottom:40px;">
+  <li><a href="#/cab_status">1</a></li>
+  <li><a href="#/cab_status/1">2</a></li>
+  <li><a href="#/cab_status/2">3</a></li>
+  <li><a href="#/cab_status/3">4</a></li>
+  <li><a href="#/cab_status/4">5</a></li>
+ 
+</ul>
+</div>

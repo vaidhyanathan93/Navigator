@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+ <html id="ng-app" ng-app="LoginApp">
+<head>
+<title>Transit System Login Page</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    
+<script src="js/jquery-1.10.2.js"></script>
+<link href="css/custom.css" rel="stylesheet" type="text/css">
+
+<script src="js/angular.min.js"></script>
+
+<script src="js/custom.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</head>
+
+<body class="loginbody">
+<div class="outlinebox"></div>
+<div class="inlinebox" ng-controller="LoginController">
+  <div class="welcome"> WELCOME</div>
+ <div class="name">{{user}}</div>
+  <p align="center"><img src="images/associate.png" class="ozimage"></p>
+  <form>
+    <!--Your Action must be here-->
+    <center>
+      <input name="id" id="id" type="text" ng-model="user" required class="textbox" placeholder="Id Here!" maxlength="45" >
+    </center>
+    <center>
+      <input name="pwd" id="pwd" type="password" required class="textbox" placeholder="Password Here!" >
+    </center>
+    <br>
+    <center>
+      <input type="submit" id="loginbtn" data-loading-text="Loading..." class ="positivebutton" value="LOGIN" >
+    </center>
+  </form>
+</div>
+    <script>
+        $('#loginbtn').click(function () {
+            usr_id = $("#id").val();
+            pass = $("#pwd").val();
+            var btn = $(this);
+           
+            btn.button('loading');
+            $.ajax({
+                
+                url: "Handlers/login_handler.ashx",
+                data: { "Associate": usr_id,"password":pass },
+                contentType: "application/json; charset=utf-8",
+                async: true,
+                dataType: "json",
+                success: function (msg) {
+                    if (msg[0].admin == "1" && msg[0].first_login == "1") {
+                        window.location.assign("tour.html");
+                    }
+                    else if (msg[0].admin == "1") {
+                        window.location.assign("home.html");
+                    }
+
+
+
+
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    alert(xhr.status);
+                    alert(thrownError);
+                }
+            }); // ajax closed
+
+
+        });
+       
+
+
+    </script>
+</body>
+</html>

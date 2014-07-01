@@ -1,0 +1,470 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{03A57B3E-0ECD-4BC3-94AD-0AF17034B756}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TransitSystem</RootNamespace>
+    <AssemblyName>TransitSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>C:\Users\Anbezhil Marban\Documents\Visual Studio 2012\Projects\WebApplication5\packages\EntityFramework.6.1.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>C:\Users\Anbezhil Marban\Documents\Visual Studio 2012\Projects\WebApplication5\packages\EntityFramework.6.1.0\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="controller\add_new_bus.js" />
+    <Content Include="controller\add_new_bus2.js" />
+    <Content Include="controller\add_new_bus3.js" />
+    <Content Include="controller\add_new_cab.js" />
+    <Content Include="controller\admin.js" />
+    <Content Include="controller\bus.js" />
+    <Content Include="controller\buss_pass_registration.js" />
+    <Content Include="controller\buss_pass_registration2.js" />
+    <Content Include="controller\bus_management.js" />
+    <Content Include="controller\bus_pass.js" />
+    <Content Include="controller\bus_pass_registration3.js" />
+    <Content Include="controller\bus_schedule.js" />
+    <Content Include="controller\bus_usage_statistics.js" />
+    <Content Include="controller\cab.js" />
+    <Content Include="controller\cab_management.js" />
+    <Content Include="controller\cab_registration.js" />
+    <Content Include="controller\cab_registration2.js" />
+    <Content Include="controller\cab_status.js" />
+    <Content Include="controller\cab_usage_statistics.js" />
+    <Content Include="controller\dashboard.js" />
+    <Content Include="controller\editdashboard.js" />
+    <Content Include="controller\feedback.js" />
+    <Content Include="controller\finley.js" />
+    <Content Include="controller\modify_bus_details.js" />
+    <Content Include="controller\modify_bus_details2.js" />
+    <Content Include="controller\modify_bus_details3.js" />
+    <Content Include="controller\modify_bus_details4.js" />
+    <Content Include="controller\modify_cab_details.js" />
+    <Content Include="controller\modify_cab_details2.js" />
+    <Content Include="controller\modify_cab_details3.js" />
+    <Content Include="controller\ranking.js" />
+    <Content Include="controller\store.js" />
+    <Content Include="controller\surprisebox.js" />
+    <Content Include="css\bootstrap-theme.css" />
+    <Content Include="css\bootstrap-theme.min.css" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\custom.css" />
+    <Content Include="css\custombootsrap.css" />
+    <Content Include="css\delete.html" />
+    <Content Include="css\font-awesome.css" />
+    <Content Include="css\images\animated-overlay.gif" />
+    <Content Include="css\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="css\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="css\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="css\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="css\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="css\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="css\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="css\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="css\images\ui-icons_222222_256x240.png" />
+    <Content Include="css\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="css\images\ui-icons_454545_256x240.png" />
+    <Content Include="css\images\ui-icons_888888_256x240.png" />
+    <Content Include="css\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="css\jquery-ui-1.10.4.custom.css" />
+    <Content Include="css\jquery-ui-1.10.4.custom.min.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="home.html" />
+    <Content Include="images\admin.png" />
+    <Content Include="images\ajax-loader-large.gif" />
+    <Content Include="images\ajax-loader.gif" />
+    <Content Include="images\associate.png" />
+    <Content Include="images\backgorundclassic.jpg" />
+    <Content Include="images\bus.png" />
+    <Content Include="images\bus2.png" />
+    <Content Include="images\cab.png" />
+    <Content Include="images\car2.png" />
+    <Content Include="images\christmas-gift-box.png" />
+    <Content Include="images\ctstheme\33.jpg" />
+    <Content Include="images\ctstheme\38.jpg" />
+    <Content Include="images\ctstheme\39.jpg" />
+    <Content Include="images\ctstheme\56.jpg" />
+    <Content Include="images\ctstheme\57.jpg" />
+    <Content Include="images\ctstheme\59.jpg" />
+    <Content Include="images\ctstheme\dashboard.jpg" />
+    <Content Include="images\ctstheme\editdashboard.jpg" />
+    <Content Include="images\ctstheme\feedback.jpg" />
+    <Content Include="images\ctstheme\help.jpg" />
+    <Content Include="images\ctstheme\ranking.jpg" />
+    <Content Include="images\ctstheme\start1.jpg" />
+    <Content Include="images\ctstheme\start2.jpg" />
+    <Content Include="images\ctstheme\start3.jpg" />
+    <Content Include="images\ctstheme\start4.jpg" />
+    <Content Include="images\ctstheme\start5.jpg" />
+    <Content Include="images\ctstheme\start6.jpg" />
+    <Content Include="images\ctstheme\start7.jpg" />
+    <Content Include="images\ctstheme\surprisebox.jpg" />
+    <Content Include="images\feedback.png" />
+    <Content Include="images\finley.png" />
+    <Content Include="images\giftbox.jpg" />
+    <Content Include="images\girl speech.png" />
+    <Content Include="images\help.png" />
+    <Content Include="images\home.jpg" />
+    <Content Include="images\home.png" />
+    <Content Include="images\home2.png" />
+    <Content Include="images\home3.png" />
+    <Content Include="images\king.png" />
+    <Content Include="images\leftdrop.png" />
+    <Content Include="images\luck.png" />
+    <Content Include="images\men.jpg" />
+    <Content Include="images\message.png" />
+    <Content Include="images\message2.png" />
+    <Content Include="images\message3.png" />
+    <Content Include="images\message4.png" />
+    <Content Include="images\notification.png" />
+    <Content Include="images\notification2.png" />
+    <Content Include="images\notiifcation.png" />
+    <Content Include="images\oz.jpg" />
+    <Content Include="images\oz_login_bg.jpg" />
+    <Content Include="images\ranking.png" />
+    <Content Include="images\ranking2.png" />
+    <Content Include="images\rightdrop.png" />
+    <Content Include="images\store.png" />
+    <Content Include="images\store1.png" />
+    <Content Include="images\store2.png" />
+    <Content Include="images\store\attack.jpg" />
+    <Content Include="images\store\businessman.png" />
+    <Content Include="images\store\castle1.jpg" />
+    <Content Include="images\store\castle2.jpg" />
+    <Content Include="images\store\castle3.jpg" />
+    <Content Include="images\store\castle4.jpg" />
+    <Content Include="images\store\defence.jpg" />
+    <Content Include="images\store\dog.png" />
+    <Content Include="images\store\figure.png" />
+    <Content Include="images\store\fin.jpg" />
+    <Content Include="images\store\gettingup.png" />
+    <Content Include="images\store\sheriff.png" />
+    <Content Include="images\store\star.png" />
+    <Content Include="images\store\strong.png" />
+    <Content Include="images\store\superstar.png" />
+    <Content Include="images\store\toy1.jpg" />
+    <Content Include="images\store\umbrella.png" />
+    <Content Include="js\angular.min.js" />
+    <Content Include="js\angularroute.min.js" />
+    <Content Include="js\bootstrap.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\custom.js" />
+    <Content Include="js\customangjs.js" />
+    <Content Include="js\jquery-1.10.2.js" />
+    <Content Include="js\jquery-ui-1.10.4.custom.js" />
+    <Content Include="js\jquery-ui-1.10.4.custom.min.js" />
+    <Content Include="js\json.js" />
+    <Content Include="js\todos.js" />
+    <Content Include="login.html" />
+    <Content Include="pages\add_new_bus.html" />
+    <Content Include="pages\add_new_bus2.html" />
+    <Content Include="pages\add_new_bus3.html" />
+    <Content Include="pages\add_new_cab.html" />
+    <Content Include="pages\add_new_cab2.html" />
+    <Content Include="pages\admin.html" />
+    <Content Include="pages\bus.html" />
+    <Content Include="pages\BusHome.html" />
+    <Content Include="pages\BusPass.html" />
+    <Content Include="pages\BusRegistration1.html" />
+    <Content Include="pages\BusRegistration2.html" />
+    <Content Include="pages\BusSchedule1.html" />
+    <Content Include="pages\BusSchedule2.html" />
+    <Content Include="pages\bus_canceled.html" />
+    <Content Include="pages\bus_management.html" />
+    <Content Include="pages\bus_pass.html" />
+    <Content Include="pages\bus_pass_canceled.html" />
+    <Content Include="pages\bus_pass_registration.html" />
+    <Content Include="pages\bus_pass_registration2.html" />
+    <Content Include="pages\bus_pass_registration3.html" />
+    <Content Include="pages\bus_schedule.html" />
+    <Content Include="pages\bus_schedule2.html" />
+    <Content Include="pages\bus_usage_statistics.html" />
+    <Content Include="pages\cab.html" />
+    <Content Include="pages\CabHome.html" />
+    <Content Include="pages\CabRequest.html" />
+    <Content Include="pages\CabStatus.html" />
+    <Content Include="pages\cab_canceled.html" />
+    <Content Include="pages\cab_cancelled.html" />
+    <Content Include="pages\cab_management.html" />
+    <Content Include="pages\cab_registration.html" />
+    <Content Include="pages\cab_registration2.html" />
+    <Content Include="pages\cab_status.html" />
+    <Content Include="pages\cab_usage_statistics.html" />
+    <Content Include="pages\dashboard.html" />
+    <Content Include="pages\editdashboard.html" />
+    <Content Include="pages\error.html" />
+    <Content Include="pages\feedback.html" />
+    <Content Include="pages\finley.html" />
+    <Content Include="pages\help.html" />
+    <Content Include="pages\home.html" />
+    <Content Include="pages\login.html" />
+    <Content Include="pages\modify_bus_details.html" />
+    <Content Include="pages\modify_bus_details2.html" />
+    <Content Include="pages\modify_bus_details3.html" />
+    <Content Include="pages\modify_bus_details4.html" />
+    <Content Include="pages\modify_bus_details5.html" />
+    <Content Include="pages\modify_cab_details.html" />
+    <Content Include="pages\modify_cab_details2.html" />
+    <Content Include="pages\modify_cab_details3.html" />
+    <Content Include="pages\ranking.html" />
+    <Content Include="pages\store.html" />
+    <Content Include="pages\StoreMessage.html" />
+    <Content Include="pages\surprisebox.html" />
+    <Content Include="pages\view_bus_details.html" />
+    <Content Include="tour.html" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Handlers\Admin\AddBusHandler.ashx.cs">
+      <DependentUpon>AddBusHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\Admin\AddCabHandler.ashx.cs">
+      <DependentUpon>AddCabHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\Admin\AddRouteHandler.ashx.cs">
+      <DependentUpon>AddRouteHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\Admin\DeleteBusHandler.ashx.cs">
+      <DependentUpon>DeleteBusHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\Admin\DeleteCabHandler.ashx.cs">
+      <DependentUpon>DeleteCabHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\Admin\DisplayBusStatsHandler.ashx.cs">
+      <DependentUpon>DisplayBusStatsHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\Admin\DisplayCabStatsHandler.ashx.cs">
+      <DependentUpon>DisplayCabStatsHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\Admin\GetBusHandler.ashx.cs">
+      <DependentUpon>GetBusHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\Admin\GetCabHandler.ashx.cs">
+      <DependentUpon>GetCabHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\Admin\GetRouteHandler.ashx.cs">
+      <DependentUpon>GetRouteHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\Admin\ModifyBusHandler.ashx.cs">
+      <DependentUpon>ModifyBusHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\Admin\ModifyRouteHandler.ashx.cs">
+      <DependentUpon>ModifyRouteHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\Admin\SearchBusScheduleHandler.ashx.cs">
+      <DependentUpon>SearchBusScheduleHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\Admin\SearchCabHandler.ashx.cs">
+      <DependentUpon>SearchCabHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\Admin\UpdateCabHandler.ashx.cs">
+      <DependentUpon>UpdateCabHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\BusPass\AddBusPassHandler.ashx.cs">
+      <DependentUpon>AddBusPassHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\BusPass\CancelBusPassHandler.ashx.cs">
+      <DependentUpon>CancelBusPassHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\BusPass\GetBusPassHandler.ashx.cs">
+      <DependentUpon>GetBusPassHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\BusPass\RenewBusPassHandler.ashx.cs">
+      <DependentUpon>RenewBusPassHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\BusPass\SelectABusHandler.ashx.cs">
+      <DependentUpon>SelectABusHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\cabregistration.ashx.cs" />
+    <Compile Include="Handlers\cabregistration2.ashx.cs" />
+    <Compile Include="Handlers\CabRequest\AddCabRequestHandler.ashx.cs">
+      <DependentUpon>AddCabRequestHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\CabRequest\CancelCabRequestHandler.ashx.cs">
+      <DependentUpon>CancelCabRequestHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\CabRequest\GetCabStatusHandler.ashx.cs">
+      <DependentUpon>GetCabStatusHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\Finley\GetAssociateDetailsHandler.ashx.cs">
+      <DependentUpon>GetAssociateDetailsHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\Finley\UpdateAssociateDetailsHandler.ashx.cs">
+      <DependentUpon>UpdateAssociateDetailsHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\Gamification\AddFeedbackHandler.ashx.cs">
+      <DependentUpon>AddFeedbackHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\Gamification\BuyItemHandler.ashx.cs">
+      <DependentUpon>BuyItemHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\Gamification\DisplayHelpHandler.ashx.cs">
+      <DependentUpon>DisplayHelpHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\Gamification\DisplayMessageHandler.ashx.cs">
+      <DependentUpon>DisplayMessageHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\Gamification\DisplayNotificationHandler.ashx.cs">
+      <DependentUpon>DisplayNotificationHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\Gamification\DisplayRankingHandler.ashx.cs">
+      <DependentUpon>DisplayRankingHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\Gamification\InsertMessageHandler.ashx.cs">
+      <DependentUpon>InsertMessageHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\Gamification\InsertNotificationHandler.ashx.cs">
+      <DependentUpon>InsertNotificationHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\Login\LoginHandler.ashx.cs">
+      <DependentUpon>LoginHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Handlers\Login\LoginHandler.ashx" />
+    <Content Include="Handlers\BusPass\SelectABusHandler.ashx" />
+    <Content Include="Handlers\BusPass\AddBusPassHandler.ashx" />
+    <Content Include="Handlers\BusPass\GetBusPassHandler.ashx" />
+    <Content Include="Handlers\BusPass\RenewBusPassHandler.ashx" />
+    <Content Include="Handlers\BusPass\CancelBusPassHandler.ashx" />
+    <Content Include="Handlers\CabRequest\AddCabRequestHandler.ashx" />
+    <Content Include="Handlers\CabRequest\GetCabStatusHandler.ashx" />
+    <Content Include="Handlers\CabRequest\CancelCabRequestHandler.ashx" />
+    <Content Include="Handlers\Finley\GetAssociateDetailsHandler.ashx" />
+    <Content Include="Handlers\Finley\UpdateAssociateDetailsHandler.ashx" />
+    <Content Include="Handlers\Gamification\DisplayRankingHandler.ashx" />
+    <Content Include="Handlers\Gamification\BuyItemHandler.ashx" />
+    <Content Include="Handlers\Gamification\DisplayHelpHandler.ashx" />
+    <Content Include="Handlers\Gamification\AddFeedbackHandler.ashx" />
+    <Content Include="Handlers\Gamification\InsertMessageHandler.ashx" />
+    <Content Include="Handlers\Gamification\DisplayMessageHandler.ashx" />
+    <Content Include="Handlers\Gamification\InsertNotificationHandler.ashx" />
+    <Content Include="Handlers\Gamification\DisplayNotificationHandler.ashx" />
+    <Content Include="Handlers\Admin\AddBusHandler.ashx" />
+    <Content Include="Handlers\Admin\AddRouteHandler.ashx" />
+    <Content Include="Handlers\Admin\GetBusHandler.ashx" />
+    <Content Include="Handlers\Admin\GetRouteHandler.ashx" />
+    <Content Include="Handlers\Admin\SearchBusScheduleHandler.ashx" />
+    <Content Include="Handlers\Admin\ModifyBusHandler.ashx" />
+    <Content Include="Handlers\Admin\ModifyRouteHandler.ashx" />
+    <Content Include="Handlers\Admin\DeleteBusHandler.ashx" />
+    <Content Include="Handlers\Admin\AddCabHandler.ashx" />
+    <Content Include="Handlers\Admin\SearchCabHandler.ashx" />
+    <Content Include="Handlers\Admin\GetCabHandler.ashx" />
+    <Content Include="Handlers\Admin\UpdateCabHandler.ashx" />
+    <Content Include="Handlers\Admin\DeleteCabHandler.ashx" />
+    <Content Include="Handlers\Admin\DisplayBusStatsHandler.ashx" />
+    <Content Include="Handlers\Admin\DisplayCabStatsHandler.ashx" />
+    <Content Include="css\custombootstrap.min" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{64599027-d9bb-480d-b8d3-464ebc8decd5}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{9ff34971-aad2-405d-8ed6-2cca39bcfcbf}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EF\EF.csproj">
+      <Project>{98041394-8def-4784-8451-7e292e9d1ac3}</Project>
+      <Name>EF</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:24621/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

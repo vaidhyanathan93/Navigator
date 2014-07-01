@@ -1,0 +1,11 @@
+E:\Transit System\Transit System\TransitSystem\DAL\bin\Debug\DAL.dll
+E:\Transit System\Transit System\TransitSystem\DAL\bin\Debug\DAL.pdb
+E:\Transit System\Transit System\TransitSystem\DAL\bin\Debug\EF.dll
+E:\Transit System\Transit System\TransitSystem\DAL\bin\Debug\EntityFramework.dll
+E:\Transit System\Transit System\TransitSystem\DAL\bin\Debug\EntityFramework.SqlServer.dll
+E:\Transit System\Transit System\TransitSystem\DAL\bin\Debug\EF.pdb
+E:\Transit System\Transit System\TransitSystem\DAL\bin\Debug\EntityFramework.xml
+E:\Transit System\Transit System\TransitSystem\DAL\bin\Debug\EntityFramework.SqlServer.xml
+E:\Transit System\Transit System\TransitSystem\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+E:\Transit System\Transit System\TransitSystem\DAL\obj\Debug\DAL.dll
+E:\Transit System\Transit System\TransitSystem\DAL\obj\Debug\DAL.pdb

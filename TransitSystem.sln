@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransitSystem", "TransitSystem\TransitSystem.csproj", "{03A57B3E-0ECD-4BC3-94AD-0AF17034B756}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF", "EF\EF.csproj", "{98041394-8DEF-4784-8451-7E292E9D1AC3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{9FF34971-AAD2-405D-8ED6-2CCA39BCFCBF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{64599027-D9BB-480D-B8D3-464EBC8DECD5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{03A57B3E-0ECD-4BC3-94AD-0AF17034B756}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03A57B3E-0ECD-4BC3-94AD-0AF17034B756}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03A57B3E-0ECD-4BC3-94AD-0AF17034B756}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03A57B3E-0ECD-4BC3-94AD-0AF17034B756}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98041394-8DEF-4784-8451-7E292E9D1AC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98041394-8DEF-4784-8451-7E292E9D1AC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98041394-8DEF-4784-8451-7E292E9D1AC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98041394-8DEF-4784-8451-7E292E9D1AC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FF34971-AAD2-405D-8ED6-2CCA39BCFCBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FF34971-AAD2-405D-8ED6-2CCA39BCFCBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FF34971-AAD2-405D-8ED6-2CCA39BCFCBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FF34971-AAD2-405D-8ED6-2CCA39BCFCBF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64599027-D9BB-480D-B8D3-464EBC8DECD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64599027-D9BB-480D-B8D3-464EBC8DECD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64599027-D9BB-480D-B8D3-464EBC8DECD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64599027-D9BB-480D-B8D3-464EBC8DECD5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

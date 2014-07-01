@@ -1,0 +1,177 @@
+<div id="feedback" ng-controller="storeController">
+  <ul class="nav nav-tabs">
+    <li class="active"><a href="#store1" data-toggle="tab" target="_self">Store</a></li>
+    <li><a href="#awards" data-toggle="tab" target="_self">Awards</a></li>
+    <li><a href="#wallet" data-toggle="tab" target="_self">Wallet</a></li>
+    <li><a href="#castle" data-toggle="tab" target="_self">Castle</a></li>
+  </ul>
+  
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div class="tab-pane active" id="store1">
+      <p>&nbsp;</p>
+      <center>
+        <font class="form-heading">Defence</font>
+      </center>
+      <table width="606" height="107" border="0">
+        <tr>
+          <td><center>
+              <img src="images/store/toy1.jpg" style="width:70px; height:70px; " >
+            </center>
+            <br>
+            <center>
+              <font id="label">Doll- 55coins</font>
+            </center>
+            <br>
+            <center>
+              <font id="label">give +1 defence </font>
+            </center>
+            <br>
+            <br>
+            <center>
+              <input type="submit" id="button" value="BUY" ng-click="buy(1)" class="btn btn-primary">
+            </center></td>
+          <td><center>
+              <img src="images/store/defence.jpg" style="width:70px; height:70px; " >
+            </center>
+            <br>
+            <center>
+              <font id="label">ballon- 170cpoins </font>
+            </center>
+            <br>
+            <center>
+              <font id="label">give +5 defence </font>
+            </center>
+            <br>
+            <br>
+            <center>
+              <input type="submit" id="button" value="BUY" ng-click="buy(2)" class="btn btn-primary">
+            </center></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+      </table>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <center>
+        <font class="form-heading">attack</font>
+      </center>
+      <table width="606" height="107" border="0" id="attack">
+        <tr>
+          <td><center>
+              <img src="images/store/attack.jpg" style="width:70px; height:70px; " >
+            </center>
+            <br>
+            <center>
+              <font id="label">fintch-200 cpoins</font>
+            </center>
+            <br>
+            <center>
+              <font id="label">give +1 Attack points </font>
+            </center>
+            <br>
+            <br>
+            <center>
+              <input type="submit" id="button" value="BUY" ng-click="buy(1)" class="btn btn-primary">
+            </center></td>
+          <td><center>
+              <img src="images/store/fin.jpg" style="width:70px; height:70px; " >
+            </center>
+            <br>
+            <center>
+              <font id="label">Finley - 1500 coins </font>
+            </center>
+            <br>
+            <center>
+              <font id="label">give +20 Attack Points </font>
+            </center>
+            <br>
+            <br>
+            <center>
+              <input type="submit" id="button" value="BUY" ng-click="buy(1)" class="btn btn-primary">
+            </center></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+      </table>
+    </div>
+    <div class="tab-pane" id="awards">
+      <table width="340" border="0" class="table">
+        <tr>
+          <td width="48">Awards</td>
+          <td width="274">Accomplishments</td>
+        </tr>
+        <tr>
+          <td><img src="images/store/businessman.png" width="45" height="45" /></td>
+          <td>For active participation</td>
+        </tr>
+        <tr>
+          <td><img src="images/store/dog.png" width="45" height="45" /></td>
+          <td>For Completion Of tour</td>
+        </tr>
+        <tr>
+          <td><img src="images/store/figure.png" width="45" height="45" /></td>
+          <td>For continous login for 30 days</td>
+        </tr>
+        <tr>
+          <td><img src="images/store/gettingup.png" width="45" height="45" /></td>
+          <td>For first 30 bookings</td>
+        </tr>
+        <tr>
+          <td><img src="images/store/sheriff.png" width="45" height="45" /></td>
+          <td>for 500 Cab bookings</td>
+        </tr>
+        <tr>
+          <td><img src="images/store/star.png" width="45" height="45" /></td>
+          <td>For 20 continous bus renewal</td>
+        </tr>
+        <tr>
+          <td><img src="images/store/strong.png" width="45" height="45" /></td>
+          <td>For effective feedback</td>
+        </tr>
+        <tr>
+          <td><img src="images/store/superstar.png" width="45" height="45" /></td>
+          <td>For 1000 bookings</td>
+        </tr>
+        <tr>
+          <td><img src="images/store/umbrella.png" width="45" height="45" /></td>
+          <td>For using go green option for 50 times</td>
+        </tr>
+      </table>
+    </div>
+    <div class="tab-pane" id="wallet">
+      <table width="340" border="0" class="table">
+        <tr>
+          <td width="133">Gold</td>
+          <td width="189">1000 Coins</td>
+        </tr>
+        <tr>
+          <td>Castle AGE</td>
+          <td>I</td>
+        </tr>
+        <tr>
+          <td>Defence Points</td>
+          <td>990 XP</td>
+        </tr>
+        <tr>
+          <td>Attack Points</td>
+          <td>720 Xp</td>
+        </tr>
+        <tr>
+          <td>No of time Attacked</td>
+          <td>7</td>
+        </tr>
+      </table>
+    </div>
+    <div class="tab-pane" id="castle"><img style="width:750px; height:400px;" src="images/store/castle1.jpg"/></div>
+  </div>
+  <script>
+$('#myTab a').click(function (e) {
+  e.preventDefault()
+  $(this).tab('show')
+})
+</script></div>

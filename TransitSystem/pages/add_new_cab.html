@@ -1,0 +1,41 @@
+<div id="addnewcab" ng-controller="add_new_cabcontroller"><center>
+<div class="form-heading">Add New Cab
+</div></center>
+<table width="407" border="0" cellpadding="7">
+  <tr>
+    <td width="182">Cab No</td>
+    <td width="215"><div class="input-group"> <span class="input-group-addon form-text-box-icon"><span class="glyphicon glyphicon-font "></span></span>
+      <input type="text" class="form-control form-text-box" name="cab_no" ng-model="cab.cabno"></div></td>
+  </tr>
+  <tr>
+    <td>Cab Model</td>
+    <td><div class="input-group"> <span class="input-group-addon form-text-box-icon"><span class="glyphicon glyphicon-font "></span></span>
+      <input type="text" class="form-control form-text-box" name="model" ng-model="cab.model"></div></td>
+  </tr>
+    <tr>
+    <td>Area</td>
+    <td><div class="input-group"> <span class="input-group-addon form-text-box-icon"><span class="glyphicon glyphicon-font "></span></span>
+      <input type="text" class="form-control form-text-box" name="area" ng-model="cab.area"></div></td>
+  </tr>
+  <tr>
+    <td>Maximum Capacity</td>
+    <td><div class="input-group"> <span class="input-group-addon form-text-box-icon"><span class="glyphicon glyphicon-user "></span></span>
+      <input type="text" class="form-control form-text-box" name="capacity" ng-model="cab.capacity"></div></td>
+  </tr>
+  <tr>
+    <td>Driver Name</td>
+    <td><div class="input-group"> <span class="input-group-addon form-text-box-icon"><span class="glyphicon glyphicon-tag "></span></span>
+      <input type="text" class="form-control form-text-box" name="drivername" ng-model="cab.drivername"></div></td>
+  </tr>
+  <tr>
+    <td>Driver Mobile</td>
+    <td><div class="input-group"> <span class="input-group-addon form-text-box"><span class="glyphicon glyphicon-phone "></span></span>
+      <input type="text" class="form-control form-text-box" name="drivermobile" ng-model="cab.drivermobile"></div></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td><input type="button" class="btn btn-primary positivebutton" value="Save" ng-click="save()"></td>
+  </tr>
+</table>
+{{cab}}
+</div>

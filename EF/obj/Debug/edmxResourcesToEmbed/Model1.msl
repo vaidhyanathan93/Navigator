@@ -1,0 +1,427 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Galactic_KnightsEntities">
+    <EntitySetMapping Name="tbl_Associate">
+      <EntityTypeMapping TypeName="Model.tbl_Associate">
+        <MappingFragment StoreEntitySet="tbl_Associate">
+          <ScalarProperty Name="associate_id" ColumnName="associate_id" />
+          <ScalarProperty Name="associate_name" ColumnName="associate_name" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="phone_no" ColumnName="phone_no" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="bus_pass_id" ColumnName="bus_pass_id" />
+          <ScalarProperty Name="cab_request_id" ColumnName="cab_request_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Bus">
+      <EntityTypeMapping TypeName="Model.tbl_Bus">
+        <MappingFragment StoreEntitySet="tbl_Bus">
+          <ScalarProperty Name="bus_no" ColumnName="bus_no" />
+          <ScalarProperty Name="route_no" ColumnName="route_no" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="capacity" ColumnName="capacity" />
+          <ScalarProperty Name="available_seats" ColumnName="available_seats" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Cab">
+      <EntityTypeMapping TypeName="Model.tbl_Cab">
+        <MappingFragment StoreEntitySet="tbl_Cab">
+          <ScalarProperty Name="cab_no" ColumnName="cab_no" />
+          <ScalarProperty Name="cab_model" ColumnName="cab_model" />
+          <ScalarProperty Name="capacity" ColumnName="capacity" />
+          <ScalarProperty Name="available_seats" ColumnName="available_seats" />
+          <ScalarProperty Name="driver_name" ColumnName="driver_name" />
+          <ScalarProperty Name="driver_mobile" ColumnName="driver_mobile" />
+          <ScalarProperty Name="area" ColumnName="area" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_CabRequest">
+      <EntityTypeMapping TypeName="Model.tbl_CabRequest">
+        <MappingFragment StoreEntitySet="tbl_CabRequest">
+          <ScalarProperty Name="cab_request_id" ColumnName="cab_request_id" />
+          <ScalarProperty Name="associate_id" ColumnName="associate_id" />
+          <ScalarProperty Name="cab_no" ColumnName="cab_no" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="time" ColumnName="time" />
+          <ScalarProperty Name="pick_up_point" ColumnName="pick_up_point" />
+          <ScalarProperty Name="destination" ColumnName="destination" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="associate_mobile" ColumnName="associate_mobile" />
+          <ScalarProperty Name="go_green" ColumnName="go_green" />
+          <ScalarProperty Name="privileged_user" ColumnName="privileged_user" />
+          <ScalarProperty Name="comment" ColumnName="comment" />
+          <ScalarProperty Name="cab_type" ColumnName="cab_type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Feedback">
+      <EntityTypeMapping TypeName="Model.tbl_Feedback">
+        <MappingFragment StoreEntitySet="tbl_Feedback">
+          <ScalarProperty Name="feedback_id" ColumnName="feedback_id" />
+          <ScalarProperty Name="vehicle_no" ColumnName="vehicle_no" />
+          <ScalarProperty Name="vehicle_punctuality" ColumnName="vehicle_punctuality" />
+          <ScalarProperty Name="journey" ColumnName="journey" />
+          <ScalarProperty Name="feedback" ColumnName="feedback" />
+          <ScalarProperty Name="rating" ColumnName="rating" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Gamer">
+      <EntityTypeMapping TypeName="Model.tbl_Gamer">
+        <MappingFragment StoreEntitySet="tbl_Gamer">
+          <ScalarProperty Name="associate_id" ColumnName="associate_id" />
+          <ScalarProperty Name="game_level" ColumnName="game_level" />
+          <ScalarProperty Name="coins_earned" ColumnName="coins_earned" />
+          <ScalarProperty Name="item_id" ColumnName="item_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Help">
+      <EntityTypeMapping TypeName="Model.tbl_Help">
+        <MappingFragment StoreEntitySet="tbl_Help">
+          <ScalarProperty Name="help_id" ColumnName="help_id" />
+          <ScalarProperty Name="question" ColumnName="question" />
+          <ScalarProperty Name="answer" ColumnName="answer" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Login">
+      <EntityTypeMapping TypeName="Model.tbl_Login">
+        <MappingFragment StoreEntitySet="tbl_Login">
+          <ScalarProperty Name="associate_id" ColumnName="associate_id" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="first_login" ColumnName="first_login" />
+          <ScalarProperty Name="admin" ColumnName="admin" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Message">
+      <EntityTypeMapping TypeName="Model.tbl_Message">
+        <MappingFragment StoreEntitySet="tbl_Message">
+          <ScalarProperty Name="message_id" ColumnName="message_id" />
+          <ScalarProperty Name="associate_id" ColumnName="associate_id" />
+          <ScalarProperty Name="message" ColumnName="message" />
+          <ScalarProperty Name="time" ColumnName="time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Notification">
+      <EntityTypeMapping TypeName="Model.tbl_Notification">
+        <MappingFragment StoreEntitySet="tbl_Notification">
+          <ScalarProperty Name="notification_id" ColumnName="notification_id" />
+          <ScalarProperty Name="associate_id" ColumnName="associate_id" />
+          <ScalarProperty Name="notification" ColumnName="notification" />
+          <ScalarProperty Name="time" ColumnName="time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Route">
+      <EntityTypeMapping TypeName="Model.tbl_Route">
+        <MappingFragment StoreEntitySet="tbl_Route">
+          <ScalarProperty Name="cost" ColumnName="cost" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="route_no" ColumnName="route_no" />
+          <ScalarProperty Name="location" ColumnName="location" />
+          <ScalarProperty Name="time" ColumnName="time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Store">
+      <EntityTypeMapping TypeName="Model.tbl_Store">
+        <MappingFragment StoreEntitySet="tbl_Store">
+          <ScalarProperty Name="item_id" ColumnName="item_id" />
+          <ScalarProperty Name="item_name" ColumnName="item_name" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="coins" ColumnName="coins" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="usp_AddBus" FunctionName="Model.Store.usp_AddBus" />
+    <FunctionImportMapping FunctionImportName="usp_AddBusPass" FunctionName="Model.Store.usp_AddBusPass" />
+    <FunctionImportMapping FunctionImportName="usp_AddCab" FunctionName="Model.Store.usp_AddCab" />
+    <FunctionImportMapping FunctionImportName="usp_AddCabRequest" FunctionName="Model.Store.usp_AddCabRequest" />
+    <FunctionImportMapping FunctionImportName="usp_AddFeedback" FunctionName="Model.Store.usp_AddFeedback" />
+    <FunctionImportMapping FunctionImportName="usp_AddRoute" FunctionName="Model.Store.usp_AddRoute" />
+    <FunctionImportMapping FunctionImportName="usp_BuyItem" FunctionName="Model.Store.usp_BuyItem" />
+    <FunctionImportMapping FunctionImportName="usp_CancelBusPass" FunctionName="Model.Store.usp_CancelBusPass" />
+    <FunctionImportMapping FunctionImportName="usp_DeleteBus" FunctionName="Model.Store.usp_DeleteBus" />
+    <FunctionImportMapping FunctionImportName="usp_DeleteCab" FunctionName="Model.Store.usp_DeleteCab" />
+    <FunctionImportMapping FunctionImportName="usp_DisplayBusStats" FunctionName="Model.Store.usp_DisplayBusStats">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Model.usp_DisplayBusStats_Result">
+          <ScalarProperty Name="bus_no" ColumnName="bus_no" />
+          <ScalarProperty Name="route_no" ColumnName="route_no" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="capacity" ColumnName="capacity" />
+          <ScalarProperty Name="available_seats" ColumnName="available_seats" />
+          <ScalarProperty Name="feedback_id" ColumnName="feedback_id" />
+          <ScalarProperty Name="vehicle_no" ColumnName="vehicle_no" />
+          <ScalarProperty Name="vehicle_punctuality" ColumnName="vehicle_punctuality" />
+          <ScalarProperty Name="journey" ColumnName="journey" />
+          <ScalarProperty Name="feedback" ColumnName="feedback" />
+          <ScalarProperty Name="rating" ColumnName="rating" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_DisplayCabStats" FunctionName="Model.Store.usp_DisplayCabStats">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Model.usp_DisplayCabStats_Result">
+          <ScalarProperty Name="cab_no" ColumnName="cab_no" />
+          <ScalarProperty Name="cab_model" ColumnName="cab_model" />
+          <ScalarProperty Name="capacity" ColumnName="capacity" />
+          <ScalarProperty Name="available_seats" ColumnName="available_seats" />
+          <ScalarProperty Name="driver_name" ColumnName="driver_name" />
+          <ScalarProperty Name="driver_mobile" ColumnName="driver_mobile" />
+          <ScalarProperty Name="area" ColumnName="area" />
+          <ScalarProperty Name="feedback_id" ColumnName="feedback_id" />
+          <ScalarProperty Name="vehicle_no" ColumnName="vehicle_no" />
+          <ScalarProperty Name="vehicle_punctuality" ColumnName="vehicle_punctuality" />
+          <ScalarProperty Name="journey" ColumnName="journey" />
+          <ScalarProperty Name="feedback" ColumnName="feedback" />
+          <ScalarProperty Name="rating" ColumnName="rating" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_DisplayHelp" FunctionName="Model.Store.usp_DisplayHelp">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Model.usp_DisplayHelp_Result">
+          <ScalarProperty Name="help_id" ColumnName="help_id" />
+          <ScalarProperty Name="question" ColumnName="question" />
+          <ScalarProperty Name="answer" ColumnName="answer" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_DisplayMessage" FunctionName="Model.Store.usp_DisplayMessage">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Model.usp_DisplayMessage_Result">
+          <ScalarProperty Name="message_id" ColumnName="message_id" />
+          <ScalarProperty Name="associate_id" ColumnName="associate_id" />
+          <ScalarProperty Name="message" ColumnName="message" />
+          <ScalarProperty Name="time" ColumnName="time" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_DisplayNotification" FunctionName="Model.Store.usp_DisplayNotification">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Model.usp_DisplayNotification_Result">
+          <ScalarProperty Name="notification_id" ColumnName="notification_id" />
+          <ScalarProperty Name="associate_id" ColumnName="associate_id" />
+          <ScalarProperty Name="notification" ColumnName="notification" />
+          <ScalarProperty Name="time" ColumnName="time" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_DisplayRanking" FunctionName="Model.Store.usp_DisplayRanking">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Model.usp_DisplayRanking_Result">
+          <ScalarProperty Name="associate_id" ColumnName="associate_id" />
+          <ScalarProperty Name="game_level" ColumnName="game_level" />
+          <ScalarProperty Name="coins_earned" ColumnName="coins_earned" />
+          <ScalarProperty Name="item_id" ColumnName="item_id" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_GetAssociateDetails" FunctionName="Model.Store.usp_GetAssociateDetails">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Model.usp_GetAssociateDetails_Result">
+          <ScalarProperty Name="associate_id" ColumnName="associate_id" />
+          <ScalarProperty Name="associate_name" ColumnName="associate_name" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="phone_no" ColumnName="phone_no" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="bus_pass_id" ColumnName="bus_pass_id" />
+          <ScalarProperty Name="cab_request_id" ColumnName="cab_request_id" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_GetBus" FunctionName="Model.Store.usp_GetBus">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Model.usp_GetBus_Result">
+          <ScalarProperty Name="bus_no" ColumnName="bus_no" />
+          <ScalarProperty Name="route_no" ColumnName="route_no" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="capacity" ColumnName="capacity" />
+          <ScalarProperty Name="available_seats" ColumnName="available_seats" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_GetBusPass" FunctionName="Model.Store.usp_GetBusPass">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Model.usp_GetBusPass_Result">
+          <ScalarProperty Name="bus_pass_id" ColumnName="bus_pass_id" />
+          <ScalarProperty Name="associate_id" ColumnName="associate_id" />
+          <ScalarProperty Name="bus_no" ColumnName="bus_no" />
+          <ScalarProperty Name="associate_mobile" ColumnName="associate_mobile" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="pick_up_point" ColumnName="pick_up_point" />
+          <ScalarProperty Name="ffrom" ColumnName="ffrom" />
+          <ScalarProperty Name="privileged_user" ColumnName="privileged_user" />
+          <ScalarProperty Name="comment" ColumnName="comment" />
+          <ScalarProperty Name="bus_pass_type" ColumnName="bus_pass_type" />
+          <ScalarProperty Name="go_green" ColumnName="go_green" />
+          <ScalarProperty Name="issued_on" ColumnName="issued_on" />
+          <ScalarProperty Name="valid_till" ColumnName="valid_till" />
+          <ScalarProperty Name="destination" ColumnName="destination" />
+          <ScalarProperty Name="cost" ColumnName="cost" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_GetCab" FunctionName="Model.Store.usp_GetCab">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Model.usp_GetCab_Result">
+          <ScalarProperty Name="cab_no" ColumnName="cab_no" />
+          <ScalarProperty Name="cab_model" ColumnName="cab_model" />
+          <ScalarProperty Name="capacity" ColumnName="capacity" />
+          <ScalarProperty Name="available_seats" ColumnName="available_seats" />
+          <ScalarProperty Name="driver_name" ColumnName="driver_name" />
+          <ScalarProperty Name="driver_mobile" ColumnName="driver_mobile" />
+          <ScalarProperty Name="area" ColumnName="area" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_GetCabStatus" FunctionName="Model.Store.usp_GetCabStatus">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Model.usp_GetCabStatus_Result">
+          <ScalarProperty Name="cab_request_id" ColumnName="cab_request_id" />
+          <ScalarProperty Name="associate_id" ColumnName="associate_id" />
+          <ScalarProperty Name="cab_no" ColumnName="cab_no" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="time" ColumnName="time" />
+          <ScalarProperty Name="pick_up_point" ColumnName="pick_up_point" />
+          <ScalarProperty Name="destination" ColumnName="destination" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="associate_mobile" ColumnName="associate_mobile" />
+          <ScalarProperty Name="go_green" ColumnName="go_green" />
+          <ScalarProperty Name="privileged_user" ColumnName="privileged_user" />
+          <ScalarProperty Name="comment" ColumnName="comment" />
+          <ScalarProperty Name="cab_type" ColumnName="cab_type" />
+          <ScalarProperty Name="driver_name" ColumnName="driver_name" />
+          <ScalarProperty Name="driver_mobile" ColumnName="driver_mobile" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_GetRoute" FunctionName="Model.Store.usp_GetRoute">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Model.usp_GetRoute_Result">
+          <ScalarProperty Name="route_no" ColumnName="route_no" />
+          <ScalarProperty Name="location" ColumnName="location" />
+          <ScalarProperty Name="time" ColumnName="time" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_InsertMessage" FunctionName="Model.Store.usp_InsertMessage" />
+    <FunctionImportMapping FunctionImportName="usp_InsertNotification" FunctionName="Model.Store.usp_InsertNotification" />
+    <FunctionImportMapping FunctionImportName="usp_ModifyBus" FunctionName="Model.Store.usp_ModifyBus" />
+    <FunctionImportMapping FunctionImportName="usp_ModifyRoute" FunctionName="Model.Store.usp_ModifyRoute" />
+    <FunctionImportMapping FunctionImportName="usp_RenewBusPass" FunctionName="Model.Store.usp_RenewBusPass" />
+    <FunctionImportMapping FunctionImportName="usp_SearchBusSchedule" FunctionName="Model.Store.usp_SearchBusSchedule">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Model.usp_SearchBusSchedule_Result">
+          <ScalarProperty Name="bus_no" ColumnName="bus_no" />
+          <ScalarProperty Name="route_no" ColumnName="route_no" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="capacity" ColumnName="capacity" />
+          <ScalarProperty Name="available_seats" ColumnName="available_seats" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="route_no1" ColumnName="route_no1" />
+          <ScalarProperty Name="location" ColumnName="location" />
+          <ScalarProperty Name="time" ColumnName="time" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_SearchCab" FunctionName="Model.Store.usp_SearchCab">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Model.usp_SearchCab_Result">
+          <ScalarProperty Name="cab_no" ColumnName="cab_no" />
+          <ScalarProperty Name="cab_model" ColumnName="cab_model" />
+          <ScalarProperty Name="capacity" ColumnName="capacity" />
+          <ScalarProperty Name="available_seats" ColumnName="available_seats" />
+          <ScalarProperty Name="driver_name" ColumnName="driver_name" />
+          <ScalarProperty Name="driver_mobile" ColumnName="driver_mobile" />
+          <ScalarProperty Name="area" ColumnName="area" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_SelectABus" FunctionName="Model.Store.usp_SelectABus">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Model.usp_SelectABus_Result">
+          <ScalarProperty Name="bus_no" ColumnName="bus_no" />
+          <ScalarProperty Name="route_no" ColumnName="route_no" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="capacity" ColumnName="capacity" />
+          <ScalarProperty Name="available_seats" ColumnName="available_seats" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="location" ColumnName="location" />
+          <ScalarProperty Name="time" ColumnName="time" />
+          <ScalarProperty Name="cost" ColumnName="cost" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_UpdateAssociateDetails" FunctionName="Model.Store.usp_UpdateAssociateDetails" />
+    <FunctionImportMapping FunctionImportName="usp_UpdateCab" FunctionName="Model.Store.usp_UpdateCab" />
+    <FunctionImportMapping FunctionImportName="usp_CancelCabRequest" FunctionName="Model.Store.usp_CancelCabRequest" />
+    <FunctionImportMapping FunctionImportName="usp_GetLoginDetails" FunctionName="Model.Store.usp_GetLoginDetails">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Model.usp_GetLoginDetails_Result">
+          <ScalarProperty Name="associate_id" ColumnName="associate_id" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="first_login" ColumnName="first_login" />
+          <ScalarProperty Name="admin" ColumnName="admin" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_GetFreeUnsharedCab" FunctionName="Model.Store.usp_GetFreeUnsharedCab">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Model.usp_GetFreeUnsharedCab_Result">
+          <ScalarProperty Name="cab_no" ColumnName="cab_no" />
+          <ScalarProperty Name="cab_model" ColumnName="cab_model" />
+          <ScalarProperty Name="capacity" ColumnName="capacity" />
+          <ScalarProperty Name="available_seats" ColumnName="available_seats" />
+          <ScalarProperty Name="driver_name" ColumnName="driver_name" />
+          <ScalarProperty Name="driver_mobile" ColumnName="driver_mobile" />
+          <ScalarProperty Name="area" ColumnName="area" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_GetSharedFreeCab" FunctionName="Model.Store.usp_GetSharedFreeCab">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Model.usp_GetSharedFreeCab_Result">
+          <ScalarProperty Name="cab_no" ColumnName="cab_no" />
+          <ScalarProperty Name="cab_model" ColumnName="cab_model" />
+          <ScalarProperty Name="capacity" ColumnName="capacity" />
+          <ScalarProperty Name="available_seats" ColumnName="available_seats" />
+          <ScalarProperty Name="driver_name" ColumnName="driver_name" />
+          <ScalarProperty Name="driver_mobile" ColumnName="driver_mobile" />
+          <ScalarProperty Name="area" ColumnName="area" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_test" FunctionName="Model.Store.usp_test" />
+    <EntitySetMapping Name="tbl_BusPass">
+      <EntityTypeMapping TypeName="Model.tbl_BusPass">
+        <MappingFragment StoreEntitySet="tbl_BusPass">
+          <ScalarProperty Name="cost" ColumnName="cost" />
+          <ScalarProperty Name="destination" ColumnName="destination" />
+          <ScalarProperty Name="valid_till" ColumnName="valid_till" />
+          <ScalarProperty Name="issued_on" ColumnName="issued_on" />
+          <ScalarProperty Name="go_green" ColumnName="go_green" />
+          <ScalarProperty Name="bus_pass_type" ColumnName="bus_pass_type" />
+          <ScalarProperty Name="comment" ColumnName="comment" />
+          <ScalarProperty Name="privileged_user" ColumnName="privileged_user" />
+          <ScalarProperty Name="ffrom" ColumnName="ffrom" />
+          <ScalarProperty Name="pick_up_point" ColumnName="pick_up_point" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="associate_mobile" ColumnName="associate_mobile" />
+          <ScalarProperty Name="bus_no" ColumnName="bus_no" />
+          <ScalarProperty Name="associate_id" ColumnName="associate_id" />
+          <ScalarProperty Name="bus_pass_id" ColumnName="bus_pass_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

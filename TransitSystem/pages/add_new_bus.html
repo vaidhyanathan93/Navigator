@@ -1,0 +1,40 @@
+<div id="busdetails" ng-controller="add_new_bus">
+<br>
+<center><font class="form-heading">ADD NEW BUS</font></center>
+<table cellpadding="15">
+<td ><form method="post"  style="text-align:left;">
+
+<tr>
+<td height="68" >
+<font id="label" class="formlabel">Bus No</font>
+</td>
+<td  style="400px">
+<div class="input-group"> <span class="input-group-addon form-text-box-icon"><span class="glyphicon glyphicon-font "></span></span>
+            <input type="text" class="form-control form-text-box" name="busno" ng-model="bus.busno"></div>
+</td>
+</tr>
+
+<tr>
+<td height="73" >
+<font id="label" class="formlabel">City</font>
+</td>
+<td style="400px">
+<div class="input-group"> <span class="input-group-addon form-text-box-icon"><span class="glyphicon glyphicon-road "></span></span>
+      <input type="text" class="form-control form-text-box" name="city" ng-model="bus.city"></div>
+</td>
+</tr>
+<tr>
+<td height="102">
+<font id="label" class="formlabel">Capacity</font>
+</td>
+<td style="400px">
+<div class="input-group"> <span class="input-group-addon form-text-box-icon"><span class="glyphicon glyphicon-user "></span></span>
+      <input type="text" class="form-control form-text-box" name="capacity" ng-model="bus.capacity"></div>
+
+</td>
+</tr>
+
+</table>
+<center><input type="submit" ng-click="onsubmit()" class="btn btn-primary positivebutton" value="NEXT"></center>
+<form>
+</div>

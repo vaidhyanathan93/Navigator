@@ -1,0 +1,38 @@
+<div ng-controller="bus_pass_registration3" style="width:500px;">
+<center>
+        <font class="form-heading">
+BUS PASS</font></center>
+<table width="340" border="0" class="table formlabel">
+<!--If possible we can do it by AJax or by Angularjs need to add Angularjs-->
+  <tr>
+    <td width="116">Route Name</td>
+    <td width="214">{{buspass.routename}}</td>
+  </tr>
+  <tr>
+    <td>Boarding Point</td>
+    <td>{{buspass.boardingpoint}}</td>
+  </tr>
+  <tr>
+    <td>Location</td>
+    <td>{{buspass.location}}</td>
+  </tr>
+  <tr>
+    <td>Cost </td>
+    <td>{{buspass.cost}}</td>
+  </tr>
+  <tr>
+    <td>Registered Date</td>
+    <td>{{buspass.registereddate}}</td>
+  </tr>
+  <tr>
+    <td>Valid Till :</td>
+    <td>{{buspass.validtill}}</td>
+  </tr>
+   <tr>
+    <td></td>
+    <td><input type="button" class="btn btn-primary positivebutton" value="continue" ng-click="onsubmit()"/>
+  
+  </td>
+  </tr>
+</table>
+</div>

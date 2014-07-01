@@ -1,0 +1,1296 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tbl_Associate">
+          <Key>
+            <PropertyRef Name="associate_id" />
+          </Key>
+          <Property Name="associate_id" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="associate_name" Type="nvarchar" MaxLength="50" />
+          <Property Name="address" Type="nvarchar" MaxLength="50" />
+          <Property Name="city" Type="nvarchar" MaxLength="50" />
+          <Property Name="phone_no" Type="nvarchar" MaxLength="50" />
+          <Property Name="email" Type="nvarchar" MaxLength="50" />
+          <Property Name="bus_pass_id" Type="int" />
+          <Property Name="cab_request_id" Type="int" />
+        </EntityType>
+        <EntityType Name="tbl_Bus">
+          <Key>
+            <PropertyRef Name="bus_no" />
+          </Key>
+          <Property Name="bus_no" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="route_no" Type="nvarchar" MaxLength="50" />
+          <Property Name="city" Type="nvarchar" MaxLength="50" />
+          <Property Name="capacity" Type="int" />
+          <Property Name="available_seats" Type="int" />
+        </EntityType>
+        <EntityType Name="tbl_BusPass">
+          <Key>
+            <PropertyRef Name="bus_pass_id" />
+          </Key>
+          <Property Name="bus_pass_id" Type="int" Nullable="false" />
+          <Property Name="associate_id" Type="nvarchar" MaxLength="50" />
+          <Property Name="bus_no" Type="nvarchar" MaxLength="50" />
+          <Property Name="associate_mobile" Type="nvarchar" MaxLength="50" />
+          <Property Name="city" Type="nvarchar" MaxLength="50" />
+          <Property Name="pick_up_point" Type="nvarchar" MaxLength="50" />
+          <Property Name="ffrom" Type="nvarchar" MaxLength="50" />
+          <Property Name="privileged_user" Type="int" />
+          <Property Name="comment" Type="nvarchar" MaxLength="50" />
+          <Property Name="bus_pass_type" Type="nvarchar" MaxLength="50" />
+          <Property Name="go_green" Type="int" />
+          <Property Name="issued_on" Type="nvarchar" MaxLength="50" />
+          <Property Name="valid_till" Type="nvarchar" MaxLength="50" />
+          <Property Name="destination" Type="nvarchar" MaxLength="50" />
+          <Property Name="cost" Type="int" />
+        </EntityType>
+        <EntityType Name="tbl_Cab">
+          <Key>
+            <PropertyRef Name="cab_no" />
+          </Key>
+          <Property Name="cab_no" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="cab_model" Type="nvarchar" MaxLength="50" />
+          <Property Name="capacity" Type="int" />
+          <Property Name="available_seats" Type="int" />
+          <Property Name="driver_name" Type="nvarchar" MaxLength="50" />
+          <Property Name="driver_mobile" Type="nvarchar" MaxLength="50" />
+          <Property Name="area" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tbl_CabRequest">
+          <Key>
+            <PropertyRef Name="cab_request_id" />
+          </Key>
+          <Property Name="cab_request_id" Type="int" Nullable="false" />
+          <Property Name="associate_id" Type="nvarchar" MaxLength="50" />
+          <Property Name="cab_no" Type="nvarchar" MaxLength="50" />
+          <Property Name="date" Type="nvarchar" MaxLength="50" />
+          <Property Name="time" Type="nvarchar" MaxLength="50" />
+          <Property Name="pick_up_point" Type="nvarchar" MaxLength="50" />
+          <Property Name="destination" Type="nvarchar" MaxLength="50" />
+          <Property Name="city" Type="nvarchar" MaxLength="50" />
+          <Property Name="associate_mobile" Type="nvarchar" MaxLength="50" />
+          <Property Name="go_green" Type="int" />
+          <Property Name="privileged_user" Type="int" />
+          <Property Name="comment" Type="nvarchar" MaxLength="50" />
+          <Property Name="cab_type" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tbl_Feedback">
+          <Key>
+            <PropertyRef Name="feedback_id" />
+          </Key>
+          <Property Name="feedback_id" Type="int" Nullable="false" />
+          <Property Name="vehicle_no" Type="nvarchar" MaxLength="50" />
+          <Property Name="vehicle_punctuality" Type="nvarchar" MaxLength="50" />
+          <Property Name="journey" Type="nvarchar" MaxLength="50" />
+          <Property Name="feedback" Type="nvarchar" MaxLength="50" />
+          <Property Name="rating" Type="int" />
+        </EntityType>
+        <EntityType Name="tbl_Gamer">
+          <Key>
+            <PropertyRef Name="associate_id" />
+          </Key>
+          <Property Name="associate_id" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="game_level" Type="int" />
+          <Property Name="coins_earned" Type="int" />
+          <Property Name="item_id" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tbl_Help">
+          <Key>
+            <PropertyRef Name="help_id" />
+          </Key>
+          <Property Name="help_id" Type="int" Nullable="false" />
+          <Property Name="question" Type="nvarchar" MaxLength="50" />
+          <Property Name="answer" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tbl_Login">
+          <Key>
+            <PropertyRef Name="associate_id" />
+          </Key>
+          <Property Name="associate_id" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="password" Type="nvarchar" MaxLength="50" />
+          <Property Name="first_login" Type="int" />
+          <Property Name="admin" Type="int" />
+        </EntityType>
+        <EntityType Name="tbl_Message">
+          <Key>
+            <PropertyRef Name="message_id" />
+          </Key>
+          <Property Name="message_id" Type="int" Nullable="false" />
+          <Property Name="associate_id" Type="nvarchar" MaxLength="50" />
+          <Property Name="message" Type="nvarchar" MaxLength="50" />
+          <Property Name="time" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tbl_Notification">
+          <Key>
+            <PropertyRef Name="notification_id" />
+          </Key>
+          <Property Name="notification_id" Type="int" Nullable="false" />
+          <Property Name="associate_id" Type="nvarchar" MaxLength="50" />
+          <Property Name="notification" Type="nvarchar" MaxLength="50" />
+          <Property Name="time" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tbl_Route">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="route_no" Type="nvarchar" MaxLength="50" />
+          <Property Name="location" Type="nvarchar" MaxLength="50" />
+          <Property Name="time" Type="nvarchar" MaxLength="50" />
+          <Property Name="cost" Type="int" />
+        </EntityType>
+        <EntityType Name="tbl_Store">
+          <Key>
+            <PropertyRef Name="item_id" />
+          </Key>
+          <Property Name="item_id" Type="int" Nullable="false" />
+          <Property Name="item_name" Type="nvarchar" MaxLength="50" />
+          <Property Name="description" Type="nvarchar" MaxLength="50" />
+          <Property Name="coins" Type="int" />
+        </EntityType>
+        <Function Name="usp_AddBus" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="bus_no" Type="nvarchar" Mode="In" />
+          <Parameter Name="route_no" Type="nvarchar" Mode="In" />
+          <Parameter Name="city" Type="nvarchar" Mode="In" />
+          <Parameter Name="capacity" Type="int" Mode="In" />
+        </Function>
+        <Function Name="usp_AddBusPass" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="associate_id" Type="nvarchar" Mode="In" />
+          <Parameter Name="bus_no" Type="nvarchar" Mode="In" />
+          <Parameter Name="bus_pass_type" Type="nvarchar" Mode="In" />
+          <Parameter Name="address" Type="nvarchar" Mode="In" />
+          <Parameter Name="city" Type="nvarchar" Mode="In" />
+          <Parameter Name="pick_up_point" Type="nvarchar" Mode="In" />
+          <Parameter Name="destination" Type="nvarchar" Mode="In" />
+          <Parameter Name="mobile" Type="nvarchar" Mode="In" />
+          <Parameter Name="privileged_user" Type="int" Mode="In" />
+          <Parameter Name="issued_on" Type="nvarchar" Mode="In" />
+          <Parameter Name="go_green" Type="int" Mode="In" />
+          <Parameter Name="comment" Type="nvarchar" Mode="In" />
+          <Parameter Name="valid_till" Type="nvarchar" Mode="In" />
+          <Parameter Name="cost" Type="int" Mode="In" />
+        </Function>
+        <Function Name="usp_AddCab" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="cab_no" Type="nvarchar" Mode="In" />
+          <Parameter Name="cab_model" Type="nvarchar" Mode="In" />
+          <Parameter Name="capacity" Type="int" Mode="In" />
+          <Parameter Name="area" Type="nvarchar" Mode="In" />
+          <Parameter Name="driver_name" Type="nvarchar" Mode="In" />
+          <Parameter Name="driver_mobile" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="usp_AddCabRequest" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="cab_no" Type="nvarchar" Mode="In" />
+          <Parameter Name="associate_id" Type="nvarchar" Mode="In" />
+          <Parameter Name="mobile" Type="nvarchar" Mode="In" />
+          <Parameter Name="city" Type="nvarchar" Mode="In" />
+          <Parameter Name="pick_up_point" Type="nvarchar" Mode="In" />
+          <Parameter Name="destination" Type="nvarchar" Mode="In" />
+          <Parameter Name="date" Type="nvarchar" Mode="In" />
+          <Parameter Name="time" Type="nvarchar" Mode="In" />
+          <Parameter Name="privileged_user" Type="int" Mode="In" />
+          <Parameter Name="go_green" Type="int" Mode="In" />
+          <Parameter Name="comment" Type="nvarchar" Mode="In" />
+          <Parameter Name="cab_type" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="usp_AddFeedback" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="vehicle_no" Type="nvarchar" Mode="In" />
+          <Parameter Name="punctuality" Type="nvarchar" Mode="In" />
+          <Parameter Name="rating" Type="int" Mode="In" />
+          <Parameter Name="feedback" Type="nvarchar" Mode="In" />
+          <Parameter Name="journey" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="usp_AddRoute" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="route_no" Type="nvarchar" Mode="In" />
+          <Parameter Name="location" Type="nvarchar" Mode="In" />
+          <Parameter Name="time" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="usp_BuyItem" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="associate_id" Type="nvarchar" Mode="In" />
+          <Parameter Name="item_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="usp_CancelBusPass" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="bus_pass_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="usp_CancelCabRequest" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="cab_request_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="usp_DeleteBus" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="bus_no" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="usp_DeleteCab" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="cab_no" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="usp_DisplayBusStats" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="usp_DisplayCabStats" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="usp_DisplayHelp" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="usp_DisplayMessage" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="associate_id" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="usp_DisplayNotification" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="associate_id" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="usp_DisplayRanking" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="usp_GetAssociateDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="associate_id" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="usp_GetBus" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="bus_no" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="usp_GetBusPass" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="associate_id" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="usp_GetCab" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="cab_no" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="usp_GetCabStatus" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="associate_id" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="usp_GetFreeUnsharedCab" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="city" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="usp_GetLoginDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="usp_GetRoute" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="route_no" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="usp_GetSharedFreeCab" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="city" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="usp_InsertMessage" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="associate_id" Type="nvarchar" Mode="In" />
+          <Parameter Name="message" Type="nvarchar" Mode="In" />
+          <Parameter Name="time" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="usp_InsertNotification" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="associate_id" Type="nvarchar" Mode="In" />
+          <Parameter Name="notification" Type="nvarchar" Mode="In" />
+          <Parameter Name="time" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="usp_ModifyBus" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="bus_no" Type="nvarchar" Mode="In" />
+          <Parameter Name="route_no" Type="nvarchar" Mode="In" />
+          <Parameter Name="city" Type="nvarchar" Mode="In" />
+          <Parameter Name="capacity" Type="int" Mode="In" />
+        </Function>
+        <Function Name="usp_ModifyRoute" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="route_no" Type="nvarchar" Mode="In" />
+          <Parameter Name="location" Type="nvarchar" Mode="In" />
+          <Parameter Name="time" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="usp_RenewBusPass" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="bus_pass_id" Type="int" Mode="In" />
+          <Parameter Name="period" Type="int" Mode="In" />
+        </Function>
+        <Function Name="usp_SearchBusSchedule" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="bus_no" Type="nvarchar" Mode="In" />
+          <Parameter Name="route_no" Type="nvarchar" Mode="In" />
+          <Parameter Name="location" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="usp_SearchCab" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="cab_no" Type="nvarchar" Mode="In" />
+          <Parameter Name="cab_model" Type="nvarchar" Mode="In" />
+          <Parameter Name="area" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="usp_SelectABus" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="pick_up_point" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="usp_test" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="area" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="usp_UpdateAssociateDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="associate_id" Type="nvarchar" Mode="In" />
+          <Parameter Name="associate_name" Type="nvarchar" Mode="In" />
+          <Parameter Name="address" Type="nvarchar" Mode="In" />
+          <Parameter Name="city" Type="nvarchar" Mode="In" />
+          <Parameter Name="mobile" Type="nvarchar" Mode="In" />
+          <Parameter Name="email" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="usp_UpdateCab" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="cab_no" Type="nvarchar" Mode="In" />
+          <Parameter Name="cab_model" Type="nvarchar" Mode="In" />
+          <Parameter Name="capacity" Type="int" Mode="In" />
+          <Parameter Name="area" Type="nvarchar" Mode="In" />
+          <Parameter Name="driver_name" Type="nvarchar" Mode="In" />
+          <Parameter Name="driver_mobile" Type="nvarchar" Mode="In" />
+        </Function>
+        <EntityContainer Name="ModelStoreContainer">
+          <EntitySet Name="tbl_Associate" EntityType="Self.tbl_Associate" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_Bus" EntityType="Self.tbl_Bus" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_BusPass" EntityType="Self.tbl_BusPass" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_Cab" EntityType="Self.tbl_Cab" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_CabRequest" EntityType="Self.tbl_CabRequest" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_Feedback" EntityType="Self.tbl_Feedback" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_Gamer" EntityType="Self.tbl_Gamer" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_Help" EntityType="Self.tbl_Help" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_Login" EntityType="Self.tbl_Login" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_Message" EntityType="Self.tbl_Message" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_Notification" EntityType="Self.tbl_Notification" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_Route" EntityType="Self.tbl_Route" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_Store" EntityType="Self.tbl_Store" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="tbl_Associate">
+          <Key>
+            <PropertyRef Name="associate_id" />
+          </Key>
+          <Property Name="associate_id" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="associate_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="city" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="phone_no" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="bus_pass_id" Type="Int32" />
+          <Property Name="cab_request_id" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tbl_Bus">
+          <Key>
+            <PropertyRef Name="bus_no" />
+          </Key>
+          <Property Name="bus_no" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="route_no" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="city" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="capacity" Type="Int32" />
+          <Property Name="available_seats" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tbl_Cab">
+          <Key>
+            <PropertyRef Name="cab_no" />
+          </Key>
+          <Property Name="cab_no" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="cab_model" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="capacity" Type="Int32" />
+          <Property Name="available_seats" Type="Int32" />
+          <Property Name="driver_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="driver_mobile" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="area" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tbl_CabRequest">
+          <Key>
+            <PropertyRef Name="cab_request_id" />
+          </Key>
+          <Property Name="cab_request_id" Type="Int32" Nullable="false" />
+          <Property Name="associate_id" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="cab_no" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="date" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="time" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="pick_up_point" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="destination" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="city" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="associate_mobile" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="go_green" Type="Int32" />
+          <Property Name="privileged_user" Type="Int32" />
+          <Property Name="comment" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="cab_type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tbl_Feedback">
+          <Key>
+            <PropertyRef Name="feedback_id" />
+          </Key>
+          <Property Name="feedback_id" Type="Int32" Nullable="false" />
+          <Property Name="vehicle_no" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="vehicle_punctuality" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="journey" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="feedback" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="rating" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tbl_Gamer">
+          <Key>
+            <PropertyRef Name="associate_id" />
+          </Key>
+          <Property Name="associate_id" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="game_level" Type="Int32" />
+          <Property Name="coins_earned" Type="Int32" />
+          <Property Name="item_id" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tbl_Help">
+          <Key>
+            <PropertyRef Name="help_id" />
+          </Key>
+          <Property Name="help_id" Type="Int32" Nullable="false" />
+          <Property Name="question" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="answer" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tbl_Login">
+          <Key>
+            <PropertyRef Name="associate_id" />
+          </Key>
+          <Property Name="associate_id" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="first_login" Type="Int32" />
+          <Property Name="admin" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tbl_Message">
+          <Key>
+            <PropertyRef Name="message_id" />
+          </Key>
+          <Property Name="message_id" Type="Int32" Nullable="false" />
+          <Property Name="associate_id" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="message" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="time" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tbl_Notification">
+          <Key>
+            <PropertyRef Name="notification_id" />
+          </Key>
+          <Property Name="notification_id" Type="Int32" Nullable="false" />
+          <Property Name="associate_id" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="notification" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="time" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tbl_Route">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="route_no" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="location" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="time" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="cost" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tbl_Store">
+          <Key>
+            <PropertyRef Name="item_id" />
+          </Key>
+          <Property Name="item_id" Type="Int32" Nullable="false" />
+          <Property Name="item_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="coins" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="Galactic_KnightsEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tbl_Associate" EntityType="Self.tbl_Associate" />
+          <EntitySet Name="tbl_Bus" EntityType="Self.tbl_Bus" />
+          <EntitySet Name="tbl_Cab" EntityType="Self.tbl_Cab" />
+          <EntitySet Name="tbl_CabRequest" EntityType="Self.tbl_CabRequest" />
+          <EntitySet Name="tbl_Feedback" EntityType="Self.tbl_Feedback" />
+          <EntitySet Name="tbl_Gamer" EntityType="Self.tbl_Gamer" />
+          <EntitySet Name="tbl_Help" EntityType="Self.tbl_Help" />
+          <EntitySet Name="tbl_Login" EntityType="Self.tbl_Login" />
+          <EntitySet Name="tbl_Message" EntityType="Self.tbl_Message" />
+          <EntitySet Name="tbl_Notification" EntityType="Self.tbl_Notification" />
+          <EntitySet Name="tbl_Route" EntityType="Self.tbl_Route" />
+          <EntitySet Name="tbl_Store" EntityType="Self.tbl_Store" />
+          <FunctionImport Name="CancelCabRequest">
+          <Parameter Name="associate_id" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_AddBus">
+            <Parameter Name="bus_no" Mode="In" Type="String" />
+            <Parameter Name="route_no" Mode="In" Type="String" />
+            <Parameter Name="city" Mode="In" Type="String" />
+            <Parameter Name="capacity" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="usp_AddBusPass">
+            <Parameter Name="associate_id" Mode="In" Type="String" />
+            <Parameter Name="bus_no" Mode="In" Type="String" />
+            <Parameter Name="bus_pass_type" Mode="In" Type="String" />
+            <Parameter Name="address" Mode="In" Type="String" />
+            <Parameter Name="city" Mode="In" Type="String" />
+            <Parameter Name="pick_up_point" Mode="In" Type="String" />
+            <Parameter Name="destination" Mode="In" Type="String" />
+            <Parameter Name="mobile" Mode="In" Type="String" />
+            <Parameter Name="privileged_user" Mode="In" Type="Int32" />
+            <Parameter Name="issued_on" Mode="In" Type="String" />
+            <Parameter Name="go_green" Mode="In" Type="Int32" />
+            <Parameter Name="comment" Mode="In" Type="String" />
+            <Parameter Name="valid_till" Mode="In" Type="String" />
+            <Parameter Name="cost" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="usp_AddCab">
+            <Parameter Name="cab_no" Mode="In" Type="String" />
+            <Parameter Name="cab_model" Mode="In" Type="String" />
+            <Parameter Name="capacity" Mode="In" Type="Int32" />
+            <Parameter Name="area" Mode="In" Type="String" />
+            <Parameter Name="driver_name" Mode="In" Type="String" />
+            <Parameter Name="driver_mobile" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_AddCabRequest">
+            <Parameter Name="cab_no" Mode="In" Type="String" />
+            <Parameter Name="associate_id" Mode="In" Type="String" />
+            <Parameter Name="mobile" Mode="In" Type="String" />
+            <Parameter Name="city" Mode="In" Type="String" />
+            <Parameter Name="pick_up_point" Mode="In" Type="String" />
+            <Parameter Name="destination" Mode="In" Type="String" />
+            <Parameter Name="date" Mode="In" Type="String" />
+            <Parameter Name="time" Mode="In" Type="String" />
+            <Parameter Name="privileged_user" Mode="In" Type="Int32" />
+            <Parameter Name="go_green" Mode="In" Type="Int32" />
+            <Parameter Name="comment" Mode="In" Type="String" />
+            <Parameter Name="cab_type" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_AddFeedback">
+            <Parameter Name="vehicle_no" Mode="In" Type="String" />
+            <Parameter Name="punctuality" Mode="In" Type="String" />
+            <Parameter Name="rating" Mode="In" Type="Int32" />
+            <Parameter Name="feedback" Mode="In" Type="String" />
+            <Parameter Name="journey" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_AddRoute">
+            <Parameter Name="route_no" Mode="In" Type="String" />
+            <Parameter Name="location" Mode="In" Type="String" />
+            <Parameter Name="time" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_BuyItem">
+            <Parameter Name="associate_id" Mode="In" Type="String" />
+            <Parameter Name="item_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="usp_CancelBusPass">
+          <Parameter Name="bus_pass_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="usp_DeleteBus">
+          <Parameter Name="bus_no" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_DeleteCab">
+          <Parameter Name="cab_no" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_DisplayBusStats" ReturnType="Collection(Model.usp_DisplayBusStats_Result)" />
+          <FunctionImport Name="usp_DisplayCabStats" ReturnType="Collection(Model.usp_DisplayCabStats_Result)" />
+          <FunctionImport Name="usp_DisplayHelp" ReturnType="Collection(Model.usp_DisplayHelp_Result)" />
+          <FunctionImport Name="usp_DisplayMessage" ReturnType="Collection(Model.usp_DisplayMessage_Result)">
+          <Parameter Name="associate_id" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_DisplayNotification" ReturnType="Collection(Model.usp_DisplayNotification_Result)">
+          <Parameter Name="associate_id" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_DisplayRanking" ReturnType="Collection(Model.usp_DisplayRanking_Result)" />
+          <FunctionImport Name="usp_GetAssociateDetails" ReturnType="Collection(Model.usp_GetAssociateDetails_Result)">
+          <Parameter Name="associate_id" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_GetBus" ReturnType="Collection(Model.usp_GetBus_Result)">
+          <Parameter Name="bus_no" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_GetBusPass" ReturnType="Collection(Model.usp_GetBusPass_Result)">
+          <Parameter Name="associate_id" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_GetCab" ReturnType="Collection(Model.usp_GetCab_Result)">
+          <Parameter Name="cab_no" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_GetCabStatus" ReturnType="Collection(Model.usp_GetCabStatus_Result)">
+          <Parameter Name="associate_id" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_GetLoginData">
+          <Parameter Name="id" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_GetRoute" ReturnType="Collection(Model.usp_GetRoute_Result)">
+          <Parameter Name="route_no" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_InsertMessage">
+            <Parameter Name="associate_id" Mode="In" Type="String" />
+            <Parameter Name="message" Mode="In" Type="String" />
+            <Parameter Name="time" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_InsertNotification">
+            <Parameter Name="associate_id" Mode="In" Type="String" />
+            <Parameter Name="notification" Mode="In" Type="String" />
+            <Parameter Name="time" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_ModifyBus">
+            <Parameter Name="bus_no" Mode="In" Type="String" />
+            <Parameter Name="route_no" Mode="In" Type="String" />
+            <Parameter Name="city" Mode="In" Type="String" />
+            <Parameter Name="capacity" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="usp_ModifyRoute">
+            <Parameter Name="route_no" Mode="In" Type="String" />
+            <Parameter Name="location" Mode="In" Type="String" />
+            <Parameter Name="time" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_RenewBusPass">
+            <Parameter Name="bus_pass_id" Mode="In" Type="Int32" />
+            <Parameter Name="period" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="usp_SearchBusSchedule" ReturnType="Collection(Model.usp_SearchBusSchedule_Result)">
+            <Parameter Name="bus_no" Mode="In" Type="String" />
+            <Parameter Name="route_no" Mode="In" Type="String" />
+            <Parameter Name="location" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_SearchCab" ReturnType="Collection(Model.usp_SearchCab_Result)">
+            <Parameter Name="cab_no" Mode="In" Type="String" />
+            <Parameter Name="cab_model" Mode="In" Type="String" />
+            <Parameter Name="area" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_SelectABus" ReturnType="Collection(Model.usp_SelectABus_Result)">
+          <Parameter Name="pick_up_point" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_UpdateAssociateDetails">
+            <Parameter Name="associate_id" Mode="In" Type="String" />
+            <Parameter Name="associate_name" Mode="In" Type="String" />
+            <Parameter Name="address" Mode="In" Type="String" />
+            <Parameter Name="city" Mode="In" Type="String" />
+            <Parameter Name="mobile" Mode="In" Type="String" />
+            <Parameter Name="email" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_UpdateCab">
+            <Parameter Name="cab_no" Mode="In" Type="String" />
+            <Parameter Name="cab_model" Mode="In" Type="String" />
+            <Parameter Name="capacity" Mode="In" Type="Int32" />
+            <Parameter Name="area" Mode="In" Type="String" />
+            <Parameter Name="driver_name" Mode="In" Type="String" />
+            <Parameter Name="driver_mobile" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_CancelCabRequest">
+          <Parameter Name="cab_request_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="usp_GetLoginDetails" ReturnType="Collection(Model.usp_GetLoginDetails_Result)">
+          <Parameter Name="id" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_GetFreeUnsharedCab" ReturnType="Collection(Model.usp_GetFreeUnsharedCab_Result)" >
+          <Parameter Name="city" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_GetSharedFreeCab" ReturnType="Collection(Model.usp_GetSharedFreeCab_Result)" >
+          <Parameter Name="city" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_test">
+          <Parameter Name="area" Mode="In" Type="String" />
+          </FunctionImport>
+          <EntitySet Name="tbl_BusPass" EntityType="Model.tbl_BusPass" />
+        </EntityContainer>
+        <ComplexType Name="usp_DisplayBusStats_Result">
+          <Property Type="String" Name="bus_no" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="route_no" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="city" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="capacity" Nullable="true" />
+          <Property Type="Int32" Name="available_seats" Nullable="true" />
+          <Property Type="Int32" Name="feedback_id" Nullable="false" />
+          <Property Type="String" Name="vehicle_no" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="vehicle_punctuality" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="journey" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="feedback" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="rating" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="usp_DisplayCabStats_Result">
+          <Property Type="String" Name="cab_no" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="cab_model" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="capacity" Nullable="true" />
+          <Property Type="Int32" Name="available_seats" Nullable="true" />
+          <Property Type="String" Name="driver_name" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="driver_mobile" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="area" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="feedback_id" Nullable="false" />
+          <Property Type="String" Name="vehicle_no" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="vehicle_punctuality" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="journey" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="feedback" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="rating" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="usp_DisplayHelp_Result">
+          <Property Type="Int32" Name="help_id" Nullable="false" />
+          <Property Type="String" Name="question" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="answer" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="usp_DisplayMessage_Result">
+          <Property Type="Int32" Name="message_id" Nullable="false" />
+          <Property Type="String" Name="associate_id" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="message" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="time" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="usp_DisplayNotification_Result">
+          <Property Type="Int32" Name="notification_id" Nullable="false" />
+          <Property Type="String" Name="associate_id" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="notification" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="time" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="usp_DisplayRanking_Result">
+          <Property Type="String" Name="associate_id" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="game_level" Nullable="true" />
+          <Property Type="Int32" Name="coins_earned" Nullable="true" />
+          <Property Type="String" Name="item_id" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="usp_GetAssociateDetails_Result">
+          <Property Type="String" Name="associate_id" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="associate_name" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="address" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="city" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="phone_no" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="email" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="bus_pass_id" Nullable="true" />
+          <Property Type="Int32" Name="cab_request_id" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="usp_GetBus_Result">
+          <Property Type="String" Name="bus_no" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="route_no" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="city" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="capacity" Nullable="true" />
+          <Property Type="Int32" Name="available_seats" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="usp_GetBusPass_Result">
+          <Property Type="Int32" Name="bus_pass_id" Nullable="false" />
+          <Property Type="String" Name="associate_id" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="bus_no" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="associate_mobile" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="city" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="pick_up_point" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="ffrom" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="privileged_user" Nullable="true" />
+          <Property Type="String" Name="comment" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="bus_pass_type" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="go_green" Nullable="true" />
+          <Property Type="String" Name="issued_on" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="valid_till" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="destination" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="cost" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="usp_GetCab_Result">
+          <Property Type="String" Name="cab_no" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="cab_model" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="capacity" Nullable="true" />
+          <Property Type="Int32" Name="available_seats" Nullable="true" />
+          <Property Type="String" Name="driver_name" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="driver_mobile" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="area" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="usp_GetCabStatus_Result">
+          <Property Type="Int32" Name="cab_request_id" Nullable="true" />
+          <Property Type="String" Name="associate_id" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="cab_no" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="date" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="time" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="pick_up_point" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="destination" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="city" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="associate_mobile" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="go_green" Nullable="true" />
+          <Property Type="Int32" Name="privileged_user" Nullable="true" />
+          <Property Type="String" Name="comment" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="cab_type" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="driver_name" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="driver_mobile" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="usp_GetRoute_Result">
+          <Property Type="String" Name="route_no" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="location" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="time" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="usp_SearchBusSchedule_Result">
+          <Property Type="String" Name="bus_no" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="route_no" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="city" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="capacity" Nullable="true" />
+          <Property Type="Int32" Name="available_seats" Nullable="true" />
+          <Property Type="Int32" Name="id" Nullable="false" />
+          <Property Type="String" Name="route_no1" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="location" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="time" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="usp_SearchCab_Result">
+          <Property Type="String" Name="cab_no" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="cab_model" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="capacity" Nullable="true" />
+          <Property Type="Int32" Name="available_seats" Nullable="true" />
+          <Property Type="String" Name="driver_name" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="driver_mobile" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="area" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="usp_SelectABus_Result">
+          <Property Type="String" Name="bus_no" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="route_no" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="city" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="capacity" Nullable="true" />
+          <Property Type="Int32" Name="available_seats" Nullable="true" />
+          <Property Type="Int32" Name="id" Nullable="false" />
+          <Property Type="String" Name="location" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="time" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="cost" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="usp_GetLoginDetails_Result">
+          <Property Type="String" Name="associate_id" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="password" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="first_login" Nullable="true" />
+          <Property Type="Int32" Name="admin" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="usp_GetFreeUnsharedCab_Result">
+          <Property Type="String" Name="cab_no" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="cab_model" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="capacity" Nullable="true" />
+          <Property Type="Int32" Name="available_seats" Nullable="true" />
+          <Property Type="String" Name="driver_name" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="driver_mobile" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="area" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="usp_GetSharedFreeCab_Result">
+          <Property Type="String" Name="cab_no" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="cab_model" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="capacity" Nullable="true" />
+          <Property Type="Int32" Name="available_seats" Nullable="true" />
+          <Property Type="String" Name="driver_name" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="driver_mobile" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="area" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <EntityType Name="tbl_BusPass">
+          <Key>
+            <PropertyRef Name="bus_pass_id" />
+          </Key>
+          <Property Name="bus_pass_id" Type="Int32" Nullable="false" />
+          <Property Name="associate_id" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="bus_no" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="associate_mobile" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="city" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="pick_up_point" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ffrom" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="privileged_user" Type="Int32" />
+          <Property Name="comment" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="bus_pass_type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="go_green" Type="Int32" />
+          <Property Name="issued_on" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="valid_till" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="destination" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="cost" Type="Int32" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Galactic_KnightsEntities">
+          <EntitySetMapping Name="tbl_Associate">
+            <EntityTypeMapping TypeName="Model.tbl_Associate">
+              <MappingFragment StoreEntitySet="tbl_Associate">
+                <ScalarProperty Name="associate_id" ColumnName="associate_id" />
+                <ScalarProperty Name="associate_name" ColumnName="associate_name" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="city" ColumnName="city" />
+                <ScalarProperty Name="phone_no" ColumnName="phone_no" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="bus_pass_id" ColumnName="bus_pass_id" />
+                <ScalarProperty Name="cab_request_id" ColumnName="cab_request_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Bus">
+            <EntityTypeMapping TypeName="Model.tbl_Bus">
+              <MappingFragment StoreEntitySet="tbl_Bus">
+                <ScalarProperty Name="bus_no" ColumnName="bus_no" />
+                <ScalarProperty Name="route_no" ColumnName="route_no" />
+                <ScalarProperty Name="city" ColumnName="city" />
+                <ScalarProperty Name="capacity" ColumnName="capacity" />
+                <ScalarProperty Name="available_seats" ColumnName="available_seats" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Cab">
+            <EntityTypeMapping TypeName="Model.tbl_Cab">
+              <MappingFragment StoreEntitySet="tbl_Cab">
+                <ScalarProperty Name="cab_no" ColumnName="cab_no" />
+                <ScalarProperty Name="cab_model" ColumnName="cab_model" />
+                <ScalarProperty Name="capacity" ColumnName="capacity" />
+                <ScalarProperty Name="available_seats" ColumnName="available_seats" />
+                <ScalarProperty Name="driver_name" ColumnName="driver_name" />
+                <ScalarProperty Name="driver_mobile" ColumnName="driver_mobile" />
+                <ScalarProperty Name="area" ColumnName="area" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_CabRequest">
+            <EntityTypeMapping TypeName="Model.tbl_CabRequest">
+              <MappingFragment StoreEntitySet="tbl_CabRequest">
+                <ScalarProperty Name="cab_request_id" ColumnName="cab_request_id" />
+                <ScalarProperty Name="associate_id" ColumnName="associate_id" />
+                <ScalarProperty Name="cab_no" ColumnName="cab_no" />
+                <ScalarProperty Name="date" ColumnName="date" />
+                <ScalarProperty Name="time" ColumnName="time" />
+                <ScalarProperty Name="pick_up_point" ColumnName="pick_up_point" />
+                <ScalarProperty Name="destination" ColumnName="destination" />
+                <ScalarProperty Name="city" ColumnName="city" />
+                <ScalarProperty Name="associate_mobile" ColumnName="associate_mobile" />
+                <ScalarProperty Name="go_green" ColumnName="go_green" />
+                <ScalarProperty Name="privileged_user" ColumnName="privileged_user" />
+                <ScalarProperty Name="comment" ColumnName="comment" />
+                <ScalarProperty Name="cab_type" ColumnName="cab_type" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Feedback">
+            <EntityTypeMapping TypeName="Model.tbl_Feedback">
+              <MappingFragment StoreEntitySet="tbl_Feedback">
+                <ScalarProperty Name="feedback_id" ColumnName="feedback_id" />
+                <ScalarProperty Name="vehicle_no" ColumnName="vehicle_no" />
+                <ScalarProperty Name="vehicle_punctuality" ColumnName="vehicle_punctuality" />
+                <ScalarProperty Name="journey" ColumnName="journey" />
+                <ScalarProperty Name="feedback" ColumnName="feedback" />
+                <ScalarProperty Name="rating" ColumnName="rating" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Gamer">
+            <EntityTypeMapping TypeName="Model.tbl_Gamer">
+              <MappingFragment StoreEntitySet="tbl_Gamer">
+                <ScalarProperty Name="associate_id" ColumnName="associate_id" />
+                <ScalarProperty Name="game_level" ColumnName="game_level" />
+                <ScalarProperty Name="coins_earned" ColumnName="coins_earned" />
+                <ScalarProperty Name="item_id" ColumnName="item_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Help">
+            <EntityTypeMapping TypeName="Model.tbl_Help">
+              <MappingFragment StoreEntitySet="tbl_Help">
+                <ScalarProperty Name="help_id" ColumnName="help_id" />
+                <ScalarProperty Name="question" ColumnName="question" />
+                <ScalarProperty Name="answer" ColumnName="answer" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Login">
+            <EntityTypeMapping TypeName="Model.tbl_Login">
+              <MappingFragment StoreEntitySet="tbl_Login">
+                <ScalarProperty Name="associate_id" ColumnName="associate_id" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="first_login" ColumnName="first_login" />
+                <ScalarProperty Name="admin" ColumnName="admin" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Message">
+            <EntityTypeMapping TypeName="Model.tbl_Message">
+              <MappingFragment StoreEntitySet="tbl_Message">
+                <ScalarProperty Name="message_id" ColumnName="message_id" />
+                <ScalarProperty Name="associate_id" ColumnName="associate_id" />
+                <ScalarProperty Name="message" ColumnName="message" />
+                <ScalarProperty Name="time" ColumnName="time" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Notification">
+            <EntityTypeMapping TypeName="Model.tbl_Notification">
+              <MappingFragment StoreEntitySet="tbl_Notification">
+                <ScalarProperty Name="notification_id" ColumnName="notification_id" />
+                <ScalarProperty Name="associate_id" ColumnName="associate_id" />
+                <ScalarProperty Name="notification" ColumnName="notification" />
+                <ScalarProperty Name="time" ColumnName="time" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Route">
+            <EntityTypeMapping TypeName="Model.tbl_Route">
+              <MappingFragment StoreEntitySet="tbl_Route">
+                <ScalarProperty Name="cost" ColumnName="cost" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="route_no" ColumnName="route_no" />
+                <ScalarProperty Name="location" ColumnName="location" />
+                <ScalarProperty Name="time" ColumnName="time" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Store">
+            <EntityTypeMapping TypeName="Model.tbl_Store">
+              <MappingFragment StoreEntitySet="tbl_Store">
+                <ScalarProperty Name="item_id" ColumnName="item_id" />
+                <ScalarProperty Name="item_name" ColumnName="item_name" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="coins" ColumnName="coins" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="usp_AddBus" FunctionName="Model.Store.usp_AddBus" />
+          <FunctionImportMapping FunctionImportName="usp_AddBusPass" FunctionName="Model.Store.usp_AddBusPass" />
+          <FunctionImportMapping FunctionImportName="usp_AddCab" FunctionName="Model.Store.usp_AddCab" />
+          <FunctionImportMapping FunctionImportName="usp_AddCabRequest" FunctionName="Model.Store.usp_AddCabRequest" />
+          <FunctionImportMapping FunctionImportName="usp_AddFeedback" FunctionName="Model.Store.usp_AddFeedback" />
+          <FunctionImportMapping FunctionImportName="usp_AddRoute" FunctionName="Model.Store.usp_AddRoute" />
+          <FunctionImportMapping FunctionImportName="usp_BuyItem" FunctionName="Model.Store.usp_BuyItem" />
+          <FunctionImportMapping FunctionImportName="usp_CancelBusPass" FunctionName="Model.Store.usp_CancelBusPass" />
+          <FunctionImportMapping FunctionImportName="usp_DeleteBus" FunctionName="Model.Store.usp_DeleteBus" />
+          <FunctionImportMapping FunctionImportName="usp_DeleteCab" FunctionName="Model.Store.usp_DeleteCab" />
+          <FunctionImportMapping FunctionImportName="usp_DisplayBusStats" FunctionName="Model.Store.usp_DisplayBusStats">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Model.usp_DisplayBusStats_Result">
+                <ScalarProperty Name="bus_no" ColumnName="bus_no" />
+                <ScalarProperty Name="route_no" ColumnName="route_no" />
+                <ScalarProperty Name="city" ColumnName="city" />
+                <ScalarProperty Name="capacity" ColumnName="capacity" />
+                <ScalarProperty Name="available_seats" ColumnName="available_seats" />
+                <ScalarProperty Name="feedback_id" ColumnName="feedback_id" />
+                <ScalarProperty Name="vehicle_no" ColumnName="vehicle_no" />
+                <ScalarProperty Name="vehicle_punctuality" ColumnName="vehicle_punctuality" />
+                <ScalarProperty Name="journey" ColumnName="journey" />
+                <ScalarProperty Name="feedback" ColumnName="feedback" />
+                <ScalarProperty Name="rating" ColumnName="rating" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_DisplayCabStats" FunctionName="Model.Store.usp_DisplayCabStats">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Model.usp_DisplayCabStats_Result">
+                <ScalarProperty Name="cab_no" ColumnName="cab_no" />
+                <ScalarProperty Name="cab_model" ColumnName="cab_model" />
+                <ScalarProperty Name="capacity" ColumnName="capacity" />
+                <ScalarProperty Name="available_seats" ColumnName="available_seats" />
+                <ScalarProperty Name="driver_name" ColumnName="driver_name" />
+                <ScalarProperty Name="driver_mobile" ColumnName="driver_mobile" />
+                <ScalarProperty Name="area" ColumnName="area" />
+                <ScalarProperty Name="feedback_id" ColumnName="feedback_id" />
+                <ScalarProperty Name="vehicle_no" ColumnName="vehicle_no" />
+                <ScalarProperty Name="vehicle_punctuality" ColumnName="vehicle_punctuality" />
+                <ScalarProperty Name="journey" ColumnName="journey" />
+                <ScalarProperty Name="feedback" ColumnName="feedback" />
+                <ScalarProperty Name="rating" ColumnName="rating" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_DisplayHelp" FunctionName="Model.Store.usp_DisplayHelp">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Model.usp_DisplayHelp_Result">
+                <ScalarProperty Name="help_id" ColumnName="help_id" />
+                <ScalarProperty Name="question" ColumnName="question" />
+                <ScalarProperty Name="answer" ColumnName="answer" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_DisplayMessage" FunctionName="Model.Store.usp_DisplayMessage">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Model.usp_DisplayMessage_Result">
+                <ScalarProperty Name="message_id" ColumnName="message_id" />
+                <ScalarProperty Name="associate_id" ColumnName="associate_id" />
+                <ScalarProperty Name="message" ColumnName="message" />
+                <ScalarProperty Name="time" ColumnName="time" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_DisplayNotification" FunctionName="Model.Store.usp_DisplayNotification">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Model.usp_DisplayNotification_Result">
+                <ScalarProperty Name="notification_id" ColumnName="notification_id" />
+                <ScalarProperty Name="associate_id" ColumnName="associate_id" />
+                <ScalarProperty Name="notification" ColumnName="notification" />
+                <ScalarProperty Name="time" ColumnName="time" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_DisplayRanking" FunctionName="Model.Store.usp_DisplayRanking">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Model.usp_DisplayRanking_Result">
+                <ScalarProperty Name="associate_id" ColumnName="associate_id" />
+                <ScalarProperty Name="game_level" ColumnName="game_level" />
+                <ScalarProperty Name="coins_earned" ColumnName="coins_earned" />
+                <ScalarProperty Name="item_id" ColumnName="item_id" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_GetAssociateDetails" FunctionName="Model.Store.usp_GetAssociateDetails">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Model.usp_GetAssociateDetails_Result">
+                <ScalarProperty Name="associate_id" ColumnName="associate_id" />
+                <ScalarProperty Name="associate_name" ColumnName="associate_name" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="city" ColumnName="city" />
+                <ScalarProperty Name="phone_no" ColumnName="phone_no" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="bus_pass_id" ColumnName="bus_pass_id" />
+                <ScalarProperty Name="cab_request_id" ColumnName="cab_request_id" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_GetBus" FunctionName="Model.Store.usp_GetBus">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Model.usp_GetBus_Result">
+                <ScalarProperty Name="bus_no" ColumnName="bus_no" />
+                <ScalarProperty Name="route_no" ColumnName="route_no" />
+                <ScalarProperty Name="city" ColumnName="city" />
+                <ScalarProperty Name="capacity" ColumnName="capacity" />
+                <ScalarProperty Name="available_seats" ColumnName="available_seats" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_GetBusPass" FunctionName="Model.Store.usp_GetBusPass">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Model.usp_GetBusPass_Result">
+                <ScalarProperty Name="bus_pass_id" ColumnName="bus_pass_id" />
+                <ScalarProperty Name="associate_id" ColumnName="associate_id" />
+                <ScalarProperty Name="bus_no" ColumnName="bus_no" />
+                <ScalarProperty Name="associate_mobile" ColumnName="associate_mobile" />
+                <ScalarProperty Name="city" ColumnName="city" />
+                <ScalarProperty Name="pick_up_point" ColumnName="pick_up_point" />
+                <ScalarProperty Name="ffrom" ColumnName="ffrom" />
+                <ScalarProperty Name="privileged_user" ColumnName="privileged_user" />
+                <ScalarProperty Name="comment" ColumnName="comment" />
+                <ScalarProperty Name="bus_pass_type" ColumnName="bus_pass_type" />
+                <ScalarProperty Name="go_green" ColumnName="go_green" />
+                <ScalarProperty Name="issued_on" ColumnName="issued_on" />
+                <ScalarProperty Name="valid_till" ColumnName="valid_till" />
+                <ScalarProperty Name="destination" ColumnName="destination" />
+                <ScalarProperty Name="cost" ColumnName="cost" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_GetCab" FunctionName="Model.Store.usp_GetCab">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Model.usp_GetCab_Result">
+                <ScalarProperty Name="cab_no" ColumnName="cab_no" />
+                <ScalarProperty Name="cab_model" ColumnName="cab_model" />
+                <ScalarProperty Name="capacity" ColumnName="capacity" />
+                <ScalarProperty Name="available_seats" ColumnName="available_seats" />
+                <ScalarProperty Name="driver_name" ColumnName="driver_name" />
+                <ScalarProperty Name="driver_mobile" ColumnName="driver_mobile" />
+                <ScalarProperty Name="area" ColumnName="area" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_GetCabStatus" FunctionName="Model.Store.usp_GetCabStatus">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Model.usp_GetCabStatus_Result">
+                <ScalarProperty Name="cab_request_id" ColumnName="cab_request_id" />
+                <ScalarProperty Name="associate_id" ColumnName="associate_id" />
+                <ScalarProperty Name="cab_no" ColumnName="cab_no" />
+                <ScalarProperty Name="date" ColumnName="date" />
+                <ScalarProperty Name="time" ColumnName="time" />
+                <ScalarProperty Name="pick_up_point" ColumnName="pick_up_point" />
+                <ScalarProperty Name="destination" ColumnName="destination" />
+                <ScalarProperty Name="city" ColumnName="city" />
+                <ScalarProperty Name="associate_mobile" ColumnName="associate_mobile" />
+                <ScalarProperty Name="go_green" ColumnName="go_green" />
+                <ScalarProperty Name="privileged_user" ColumnName="privileged_user" />
+                <ScalarProperty Name="comment" ColumnName="comment" />
+                <ScalarProperty Name="cab_type" ColumnName="cab_type" />
+                <ScalarProperty Name="driver_name" ColumnName="driver_name" />
+                <ScalarProperty Name="driver_mobile" ColumnName="driver_mobile" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_GetRoute" FunctionName="Model.Store.usp_GetRoute">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Model.usp_GetRoute_Result">
+                <ScalarProperty Name="route_no" ColumnName="route_no" />
+                <ScalarProperty Name="location" ColumnName="location" />
+                <ScalarProperty Name="time" ColumnName="time" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_InsertMessage" FunctionName="Model.Store.usp_InsertMessage" />
+          <FunctionImportMapping FunctionImportName="usp_InsertNotification" FunctionName="Model.Store.usp_InsertNotification" />
+          <FunctionImportMapping FunctionImportName="usp_ModifyBus" FunctionName="Model.Store.usp_ModifyBus" />
+          <FunctionImportMapping FunctionImportName="usp_ModifyRoute" FunctionName="Model.Store.usp_ModifyRoute" />
+          <FunctionImportMapping FunctionImportName="usp_RenewBusPass" FunctionName="Model.Store.usp_RenewBusPass" />
+          <FunctionImportMapping FunctionImportName="usp_SearchBusSchedule" FunctionName="Model.Store.usp_SearchBusSchedule">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Model.usp_SearchBusSchedule_Result">
+                <ScalarProperty Name="bus_no" ColumnName="bus_no" />
+                <ScalarProperty Name="route_no" ColumnName="route_no" />
+                <ScalarProperty Name="city" ColumnName="city" />
+                <ScalarProperty Name="capacity" ColumnName="capacity" />
+                <ScalarProperty Name="available_seats" ColumnName="available_seats" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="route_no1" ColumnName="route_no1" />
+                <ScalarProperty Name="location" ColumnName="location" />
+                <ScalarProperty Name="time" ColumnName="time" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_SearchCab" FunctionName="Model.Store.usp_SearchCab">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Model.usp_SearchCab_Result">
+                <ScalarProperty Name="cab_no" ColumnName="cab_no" />
+                <ScalarProperty Name="cab_model" ColumnName="cab_model" />
+                <ScalarProperty Name="capacity" ColumnName="capacity" />
+                <ScalarProperty Name="available_seats" ColumnName="available_seats" />
+                <ScalarProperty Name="driver_name" ColumnName="driver_name" />
+                <ScalarProperty Name="driver_mobile" ColumnName="driver_mobile" />
+                <ScalarProperty Name="area" ColumnName="area" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_SelectABus" FunctionName="Model.Store.usp_SelectABus">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Model.usp_SelectABus_Result">
+                <ScalarProperty Name="bus_no" ColumnName="bus_no" />
+                <ScalarProperty Name="route_no" ColumnName="route_no" />
+                <ScalarProperty Name="city" ColumnName="city" />
+                <ScalarProperty Name="capacity" ColumnName="capacity" />
+                <ScalarProperty Name="available_seats" ColumnName="available_seats" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="location" ColumnName="location" />
+                <ScalarProperty Name="time" ColumnName="time" />
+                <ScalarProperty Name="cost" ColumnName="cost" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_UpdateAssociateDetails" FunctionName="Model.Store.usp_UpdateAssociateDetails" />
+          <FunctionImportMapping FunctionImportName="usp_UpdateCab" FunctionName="Model.Store.usp_UpdateCab" />
+          <FunctionImportMapping FunctionImportName="usp_CancelCabRequest" FunctionName="Model.Store.usp_CancelCabRequest" />
+          <FunctionImportMapping FunctionImportName="usp_GetLoginDetails" FunctionName="Model.Store.usp_GetLoginDetails">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Model.usp_GetLoginDetails_Result">
+                <ScalarProperty Name="associate_id" ColumnName="associate_id" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="first_login" ColumnName="first_login" />
+                <ScalarProperty Name="admin" ColumnName="admin" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_GetFreeUnsharedCab" FunctionName="Model.Store.usp_GetFreeUnsharedCab">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Model.usp_GetFreeUnsharedCab_Result">
+                <ScalarProperty Name="cab_no" ColumnName="cab_no" />
+                <ScalarProperty Name="cab_model" ColumnName="cab_model" />
+                <ScalarProperty Name="capacity" ColumnName="capacity" />
+                <ScalarProperty Name="available_seats" ColumnName="available_seats" />
+                <ScalarProperty Name="driver_name" ColumnName="driver_name" />
+                <ScalarProperty Name="driver_mobile" ColumnName="driver_mobile" />
+                <ScalarProperty Name="area" ColumnName="area" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_GetSharedFreeCab" FunctionName="Model.Store.usp_GetSharedFreeCab">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Model.usp_GetSharedFreeCab_Result">
+                <ScalarProperty Name="cab_no" ColumnName="cab_no" />
+                <ScalarProperty Name="cab_model" ColumnName="cab_model" />
+                <ScalarProperty Name="capacity" ColumnName="capacity" />
+                <ScalarProperty Name="available_seats" ColumnName="available_seats" />
+                <ScalarProperty Name="driver_name" ColumnName="driver_name" />
+                <ScalarProperty Name="driver_mobile" ColumnName="driver_mobile" />
+                <ScalarProperty Name="area" ColumnName="area" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_test" FunctionName="Model.Store.usp_test" />
+          <EntitySetMapping Name="tbl_BusPass">
+            <EntityTypeMapping TypeName="Model.tbl_BusPass">
+              <MappingFragment StoreEntitySet="tbl_BusPass">
+                <ScalarProperty Name="cost" ColumnName="cost" />
+                <ScalarProperty Name="destination" ColumnName="destination" />
+                <ScalarProperty Name="valid_till" ColumnName="valid_till" />
+                <ScalarProperty Name="issued_on" ColumnName="issued_on" />
+                <ScalarProperty Name="go_green" ColumnName="go_green" />
+                <ScalarProperty Name="bus_pass_type" ColumnName="bus_pass_type" />
+                <ScalarProperty Name="comment" ColumnName="comment" />
+                <ScalarProperty Name="privileged_user" ColumnName="privileged_user" />
+                <ScalarProperty Name="ffrom" ColumnName="ffrom" />
+                <ScalarProperty Name="pick_up_point" ColumnName="pick_up_point" />
+                <ScalarProperty Name="city" ColumnName="city" />
+                <ScalarProperty Name="associate_mobile" ColumnName="associate_mobile" />
+                <ScalarProperty Name="bus_no" ColumnName="bus_no" />
+                <ScalarProperty Name="associate_id" ColumnName="associate_id" />
+                <ScalarProperty Name="bus_pass_id" ColumnName="bus_pass_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

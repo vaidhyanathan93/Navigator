@@ -1,0 +1,35 @@
+<div id="add_new_cab3" ng-controller="modify_cab_details2controller">
+  <center>
+    <div class="form-heading">cab Details </div>
+  </center>
+  <table cellpadding="15">
+    <td width="109" ><form method="post"  style="text-align:left;">
+        <tr>
+            <td height="49" ><font id="label" class="formlabel">Cab No</font></td>
+            <td width="410"  style="400px"> {{cab.cabno}} </td>
+          </tr>
+         <tr>
+            <td height="49" ><font id="label" class="formlabel">Cab Model</font></td>
+            <td width="410"  style="400px"> {{cab.model}} </td>
+          </tr>
+            <tr>
+            <td height="49" ><font id="label" class="formlabel">Maximum Capacity</font></td>
+            <td width="410"  style="400px"> {{cab.capacity}} </td>
+          </tr>
+            <tr>
+            <td height="49" ><font id="label" class="formlabel">Driver Name</font></td>
+            <td width="410"  style="400px"> {{cab.drivername}} </td>
+          </tr>
+            <tr>
+            <td height="49" ><font id="label" class="formlabel">Driver Mobile</font></td>
+            <td width="410"  style="400px"> {{cab.drivermobile}} </td>
+          </tr>
+  </table>
+ 
+  <table>
+    <tr>
+      <td><input type="button" class="btn btn-primary positivebutton" value="Update" ng-click="onupdate()"/>
+        <input type="button" class="btn btn-primary dangerbutton" value="Deletee Cab" ng-click="oncancel()"/></td>
+    </tr>
+  </table>
+</div>

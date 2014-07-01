@@ -1,0 +1,69 @@
+<div id="add_new_bus3" ng-controller="add_new_bus3controller">
+
+<center>
+<div class="form-heading">Bus Details
+</div>
+</center>
+<table cellpadding="15">
+<td width="109" ><form method="post"  style="text-align:left;">
+
+  <tr>
+<td height="49" >
+<font id="label" class="formlabel">Bus No</font>
+</td>
+<td width="410"  style="400px">
+{{bus.busno}}
+</td>
+</tr>
+
+<tr>
+<td height="53" >
+<font id="label" class="formlabel">City</font>
+</td>
+<td style="400px">
+
+    {{ bus.city}}
+</td>
+</tr>
+<tr>
+<td height="63">
+<font id="label" class="formlabel">Capacity</font>
+</td>
+<td style="400px">
+{{bus.capacity}}
+
+</td>
+</tr>
+
+</table>
+
+
+<center>
+<div class="form-heading">Bus Route Details
+</div>
+</center>
+
+  <table width="623" border="0" cellpadding="7" class="table">
+    <tr>
+      <td width="184">Route Number</td>
+      <td width="174">To Offcie</td>
+      <td width="194">To Home</td>
+      <td width="5"></td><td></td>
+    </tr>
+    <tr ng-repeat="route in routes">
+      <td>{{route.route}}
+      </td>
+      <td>{{route.totime}}</td>
+      <td>{{route.fromtime}}</td>
+      <td></td>
+    </tr>
+    </table>
+
+
+
+
+
+
+
+
+</div>

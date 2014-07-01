@@ -1,0 +1,46 @@
+<div ng-controller="modify_bus_detailscontroller">
+<center>
+<font class="form-heading">Bus Schedule
+</font>
+</center>  <table width="474" border="0" cellpadding="5">
+    <tr>
+      <td><table width="378" cellpadding="5">
+          <tr>
+            
+            <td width="144"><div class="input-group"> <span class="input-group-addon form-text-box-icon"><span class="glyphicon glyphicon-road "></span></span>
+                <input type="text" class="form-control form-text-box" name="city" ng-model="schedul.city">
+              </div></td>
+          </tr>
+          <tr>
+            <td><div class="input-group"> <span class="input-group-addon form-text-box-icon"><span class="glyphicon glyphicon-map-marker "></span></span>
+                <input type="text" class="form-control form-text-box" name="from" ng-model="schedul.from">
+              </div></td>
+            <td><div class="input-group"> <span class="input-group-addon form-text-box-icon"><span class="glyphicon glyphicon-map-marker "></span></span>
+                <input type="text" class="form-control form-text-box" name="to" ng-model="schedul.to">
+              </div></td>
+          </tr>
+        </table></td>
+      <td><button type="submit" class="btn btn-primary positivebutton"  ng-click="onsearch()">Search</button></td>
+    </tr>
+  </table>
+  //contnt loaded via AJAX
+  <table width="632" border="1" id="result" style="border:#999;">
+    <tr>
+      <td width="189" class="formlabel">Bus Name</td>
+      <td width="99" class="formlabel">Boarding Time</td>
+      <td width="94" class="formlabel">Dropping Time</td>
+      <td width="89" class="formlabel">No Of Setas</td>
+      <td width="68" class="formlabel">Registered Users</td>
+      <td width="67" class="formlabel">Seat Availability</td>
+    </tr>
+    <tr class="bus_pass_border" ng-click="onclick()">
+      <td class="formlabel" >S750 sirucheri - Avadi</td>
+      <td class="formlabel">16.00</td>
+      <td class="formlabel"> 19.00</td>
+      <td class="formlabel">24</td>
+      <td class="formlabel">23</td>
+      <td class="formlabel">yes</td>
+    </tr>
+  </table>
+  <p>&nbsp;</p>
+</div>
